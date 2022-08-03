@@ -1,17 +1,17 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import LoginJHKim from "./pages/JHkim/Login/Login";
-import MainJHKim from "./pages/JHkim/Main/Main";
+import LoginJHKim from './pages/JHkim/Login/Login';
+import MainJHKim from './pages/JHkim/Main/Main';
 
-import LoginJHSo from "./pages/JHso/Login/Login";
-import MainJHSo from "./pages/JHso/Main/Main";
+import LoginJHSo from './pages/JHso/Login/Login';
+import MainJHSo from './pages/JHso/Main/Main';
 
-import LoginJSHam from "./pages/JSham/Login/Login";
-import MainJSHam from "./pages/JSham/Main/Main";
+import LoginJSHam from './pages/JSham/Login/Login';
+import MainJSHam from './pages/JSham/Main/Main';
 
-import LoginSYHa from "./pages/SYha/Login/Login";
-import MainSYHa from "./pages/SYha/Main/Main";
+import LoginSYHa from './pages/SYha/Login/Login';
+import MainSYHa from './pages/SYha/Main/Main';
 
 const Router = () => {
   return (

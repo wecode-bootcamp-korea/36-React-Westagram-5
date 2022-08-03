@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const MainJSHam = () => {
   return <h1>안녕하세요</h1>;
