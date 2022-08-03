@@ -1,7 +1,7 @@
 import React from 'react';
 
-const LoginJSHam = () => {
+const Login = () => {
   return <h1>안녕하세요</h1>;
 };
 
-export default LoginJSHam;
+export default Login;

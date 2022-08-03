@@ -17,14 +17,14 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/LoginJHKim" element={<LoginJHKim />} />
-        <Route path="/MainJHKim" element={<LoginJHKim />} />
-        <Route path="/LoginJHSo" element={<LoginJHSo />} />
-        <Route path="/MainJHSo" element={<LoginJHSo />} />
-        <Route path="/LoginJSHam" element={<LoginJSHam />} />
-        <Route path="/MainJSHam" element={<LoginJSHam />} />
-        <Route path="/LoginSYHa" element={<LoginSYHa />} />
-        <Route path="/MainSYHa" element={<LoginSYHa />} />
+        <Route path="/logink" element={<LoginJHKim />} />
+        <Route path="/maink" element={<MainJHKim />} />
+        <Route path="/logins" element={<LoginJHSo />} />
+        <Route path="/mains" element={<MainJHSo />} />
+        <Route path="/loginh" element={<LoginJSHam />} />
+        <Route path="/mainh" element={<MainJSHam />} />
+        <Route path="/loginha" element={<LoginSYHa />} />
+        <Route path="/mainha" element={<MainSYHa />} />
       </Routes>
     </BrowserRouter>
   );

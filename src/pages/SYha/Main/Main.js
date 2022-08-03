@@ -1,7 +1,7 @@
 import React from 'react';
 
-const MainSYHa = () => {
+const Main = () => {
   return <h1>안녕하세요</h1>;
 };
 
-export default MainSYHa;
+export default Main;
