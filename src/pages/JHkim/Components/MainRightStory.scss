@@ -1,0 +1,44 @@
+.Right-story {
+  margin-bottom: 20px;
+  padding: 10px 20px 0px 20px;
+  border: 1px solid #cdcdcd;
+  border-radius: 7px;
+  background-color: white;
+
+  ul li {
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      padding: 2px;
+      border: 2px solid red;
+      border-radius: 50%;
+    }
+  }
+}
+
+.recommend-story {
+  margin-bottom: 20px;
+  padding: 10px 20px 0px 20px;
+  border: 1px solid #cdcdcd;
+  border-radius: 7px;
+  background-color: white;
+
+  ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      padding: 2px;
+      border: 2px solid red;
+      border-radius: 50%;
+    }
+  }
+}

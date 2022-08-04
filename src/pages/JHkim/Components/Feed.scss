@@ -1,0 +1,98 @@
+.feed {
+  width: 500px;
+  margin-top: 30px;
+  border-radius: 7px;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+
+  .article-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    h2 {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0px 10px 0px 0px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .article-main-img {
+    width: 500px;
+    height: 500px;
+  }
+  .article-btn-img {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+
+    .left-side {
+      display: flex;
+    }
+    .btn-img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.article-comment {
+  padding: 10px;
+
+  .new-li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span strong {
+      font-weight: 900;
+    }
+
+    #delete-button {
+      border: none;
+      font-size: 16px;
+      font-weight: 900;
+      color: white;
+      background-color: white;
+    }
+
+    #delete-button:hover {
+      font-size: 17px;
+      color: red;
+      cursor: pointer;
+    }
+
+    /*댓글 li 좋아요 button style*/
+  }
+
+  input {
+    width: 470px;
+    outline: none;
+    border: none;
+  }
+}
+
+.comment-input-wrap form {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  margin-top: 5px;
+  border-top: 1px solid #efefef;
+
+  button {
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    color: #0095f6;
+    background-color: rgba(178, 164, 255, 0.2);
+  }
+}
