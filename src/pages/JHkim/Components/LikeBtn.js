@@ -2,15 +2,15 @@ import { useState } from 'react';
 import './LikeBtn.scss';
 
 function LikeBtn() {
-  const [a, setA] = useState(true);
+  const [like, setLike] = useState(true);
   return (
     <button
       className="like-button"
       onClick={() => {
-        setA(!a);
+        setLike(!like);
       }}
     >
-      {a === true ? '🤍' : '🧡'}
+      {like === true ? '🤍' : '🧡'}
     </button>
   );
 }

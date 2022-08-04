@@ -7,7 +7,7 @@ function Feed(props) {
   const [input, setInput] = useState('');
   const [users, setUsers] = useState(['Wecode Bootcamp ']);
 
-  const handleComment = event => {
+  const saveComment = event => {
     setInput(event.target.value);
   };
 
@@ -95,7 +95,7 @@ function Feed(props) {
                 id="comment-input"
                 type="text"
                 value={input}
-                onChange={handleComment}
+                onChange={saveComment}
                 placeholder="댓글달기"
               />
               <button
