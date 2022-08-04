@@ -1,0 +1,163 @@
+.feedsRight {
+  margin-top: 50px;
+  margin-left: 20px;
+  width: 250px;
+  height: 472px;
+  border: none;
+
+  .rightTop {
+    border: none;
+    width: 250px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+
+    .wecode {
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+    }
+    .bootcamp {
+      margin-left: 10px;
+
+      .gray {
+        color: #c1c0c0;
+      }
+
+      .toptext {
+        font-weight: 700;
+      }
+
+      .rightWecode {
+        font-size: small;
+      }
+    }
+  }
+
+  .rightCenter {
+    border: 1px solid #e9e9e9;
+    width: 250px;
+    height: 165px;
+    overflow: hidden;
+    font-size: small;
+    position: relative;
+  }
+  .pcenter {
+    display: flex;
+    margin-top: 7px;
+    margin-left: 9px;
+    font-size: small;
+    color: #c1c0c0;
+  }
+
+  .centertext {
+    margin-left: 183px;
+    font-size: small;
+    font-weight: 700;
+    position: absolute;
+    top: 8px;
+  }
+  .rightMiddle {
+    width: 250px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    .middle {
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+    }
+  }
+  .bootcamp {
+    margin-left: 10px;
+
+    .gray {
+      color: #c1c0c0;
+    }
+
+    .toptext {
+      font-weight: 700;
+    }
+
+    .rightWecode {
+      font-size: small;
+    }
+  }
+}
+
+.rightBottom {
+  margin-top: 20px;
+  border: 1px solid #e9e9e9;
+  width: 250px;
+  height: 150px;
+  position: relative;
+
+  .pcenter {
+    display: flex;
+    margin-top: 7px;
+    margin-left: 9px;
+    font-size: small;
+    color: #c1c0c0;
+  }
+
+  .centertextbottom {
+    margin-left: 183px;
+    font-size: small;
+    font-weight: 700;
+    position: absolute;
+    display: flex;
+    top: 8px;
+  }
+
+  .rightMiddle {
+    width: 250px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    .middle {
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+    }
+  }
+  .bootcamp {
+    margin-left: 10px;
+
+    .gray {
+      color: #c1c0c0;
+    }
+
+    .toptext {
+      font-weight: 700;
+    }
+
+    .rightWecode {
+      font-size: small;
+    }
+
+    .follow {
+      margin-left: 130px;
+      align-items: center;
+      display: flex;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      color: #0088ff;
+    }
+  }
+}
+
+.Information {
+  margin-top: 15px;
+  border: 0px solid;
+  width: 250px;
+  height: 100px;
+  font-size: small;
+  color: #c1c0c0;
+}
