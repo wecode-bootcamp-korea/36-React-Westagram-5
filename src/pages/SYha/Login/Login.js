@@ -10,10 +10,15 @@ const Login = () => {
 
   // set 함수
   const saveUserId = event => {
-    setUserId(event.target.value);
+    setUserId(event.target.value); //userID에 사용자의 입력값을 넣어줌
   };
   const saveUserPw = event => {
     setUserPw(event.target.value);
+  };
+  const validation = (userId, userPw) => {
+    return (
+      userId.indexOf('@') !== -1 && userId.length >= 6 && userPw.length >= 5
+    );
   };
 
   // Navigate
@@ -30,11 +35,13 @@ const Login = () => {
         </header>
         <form className="flex form">
           <input
+            classId=""
             className="pwAndId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value={userId}
             onChange={saveUserId}
+            onKeyUp={validation}
           />
           <input
             className="pwAndId"
@@ -45,7 +52,12 @@ const Login = () => {
           />
 
           <Link className="link" to="/main">
-            <button className="loginbtn"> 로그인</button>
+            <button
+              className="loginbtn"
+              disabled={validation(userId, userPw) === true ? false : true}
+            >
+              로그인
+            </button>
           </Link>
         </form>
 
