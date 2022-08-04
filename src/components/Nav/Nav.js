@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './Nav.scss';
 
 function Nav() {
@@ -6,10 +5,8 @@ function Nav() {
     <nav className="nav-bar">
       <div className="nav-h1">
         <h1>
-          <Link to="/Main">
-            <i className="fa-brands fa-instagram" />
-            westargram
-          </Link>
+          <i className="fa-brands fa-instagram" />
+          westargram
         </h1>
       </div>
       <div className="nav-search">
@@ -17,15 +14,9 @@ function Nav() {
         <input type="text" placeholder="검색" />
       </div>
       <div className="nav-icons">
-        <i className="fas fa-thin fa-compass">
-          <Link to="/Main" />
-        </i>
-        <i className="fas fa-thin fa-heart">
-          <Link to="/Main" />
-        </i>
-        <i className="fas fa-light fa-user">
-          <Link to="/Main" />
-        </i>
+        <i className="fas fa-thin fa-compass" />
+        <i className="fas fa-thin fa-heart" />
+        <i className="fas fa-light fa-user" />
       </div>
     </nav>
   );
