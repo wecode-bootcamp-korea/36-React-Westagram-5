@@ -1,13 +1,11 @@
-import "./Story.scss";
+import './Story.scss';
 
 function Story(props) {
   let lis = props.onEvent;
   return (
-    <>
-      <div className="story">
-        <ul>{lis}</ul>
-      </div>
-    </>
+    <div className="story">
+      <ul>{lis}</ul>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
-import imgRender from "./imgRender";
-import MainRightStory from "./MainRightStory";
-import "./MainRight.scss";
-import "./MainRightStory.scss";
+import imgRender from './imgRender';
+import MainRightStory from './MainRightStory';
+import './MainRight.scss';
+import './MainRightStory.scss';
 
 function MainRight(props) {
   return (
@@ -9,7 +9,7 @@ function MainRight(props) {
       <div className="main-right">
         <div className="right-profile">
           <h2>
-            <img src="img/운명 트로트 2.jpg" alt="" />
+            <img src="images/JHKim/운명 트로트 2.jpg" alt="" />
           </h2>
           <div>
             <h3>
@@ -28,10 +28,10 @@ function MainRight(props) {
 export default MainRight;
 
 const url = [
-  { src: "img/1.png", name: "name1" },
-  { src: "img/2.jpg", name: "name2" },
-  { src: "img/3.png", name: "name3" },
-  { src: "img/4.jfif", name: "name4" },
-  { src: "img/5.png", name: "name5" },
-  { src: "img/6.jpg", name: "name6" },
+  { src: 'images/JHKim/1.png', name: 'name1' },
+  { src: 'images/JHKim/2.jpg', name: 'name2' },
+  { src: 'images/JHKim/3.png', name: 'name3' },
+  { src: 'images/JHKim/4.jfif', name: 'name4' },
+  { src: 'images/JHKim/5.png', name: 'name5' },
+  { src: 'images/JHKim/6.jpg', name: 'name6' },
 ];

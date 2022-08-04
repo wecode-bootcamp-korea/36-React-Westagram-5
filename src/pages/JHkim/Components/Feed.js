@@ -1,29 +1,29 @@
-import { useState } from "react";
-import LikeBtn from "./LikeBtn";
-import "./Feed.scss";
+import { useState } from 'react';
+import LikeBtn from './LikeBtn';
+import './Feed.scss';
 
 function Feed(props) {
   const [comments, setComment] = useState([]);
-  const [input, setInput] = useState("");
-  const [users, setUsers] = useState(["Wecode Bootcamp "]);
+  const [input, setInput] = useState('');
+  const [users, setUsers] = useState(['Wecode Bootcamp ']);
 
-  const handleComment = (event) => {
+  const handleComment = event => {
     setInput(event.target.value);
   };
 
-  const handleUpload = (event) => {
+  const handleUpload = event => {
     event.preventDefault();
-    setComment((prevState) => {
+    setComment(prevState => {
       return [...prevState, input];
     });
-    setInput("");
+    setInput('');
   };
 
-  const disableUpload = (event) => {
+  const disableUpload = event => {
     event.preventDefault();
   };
 
-  const deleteLi = (event) => {
+  const deleteLi = event => {
     const div = event.target.parentElement;
     const li = div.parentElement;
     li.remove();
@@ -34,38 +34,38 @@ function Feed(props) {
       <article>
         <div className="article-head">
           <h2>
-            <img src="img/운명 트로트 2.jpg" alt={"This is profile"} />
+            <img src="images/JHKim/운명 트로트 2.jpg" alt="This is profile" />
             <p>HYUKSKEE</p>
           </h2>
-          <i className="fas fa-thin fa-ellipsis"></i>
+          <i className="fas fa-thin fa-ellipsis" />
         </div>
         <div className="article-content">
           <img
             className="article-main-img"
-            src="img/야나두.gif"
+            src="images/JHKim/야나두.gif"
             alt="This is article"
           />
           <div className="article-btn-img">
             <div className="left-side">
               <img
                 className="btn-img"
-                src="img/heart.png"
+                src="images/JHKim/heart.png"
                 alt="This is heart icon"
               />
               <img
                 className="btn-img"
-                src="img/chat.png"
+                src="images/JHKim/chat.png"
                 alt="This is comment icon"
               />
               <img
                 className="btn-img"
-                src="img/export.png"
+                src="images/JHKim/export.png"
                 alt="This is share icon"
               />
             </div>
             <img
               className="btn-img"
-              src="img/tag.png"
+              src="images/JHKim/tag.png"
               alt="This is book mark icon"
             />
           </div>
@@ -101,7 +101,7 @@ function Feed(props) {
               <button
                 type="submit"
                 id="upload-button"
-                onClick={input !== "" ? handleUpload : disableUpload}
+                onClick={input !== '' ? handleUpload : disableUpload}
               >
                 게시
               </button>

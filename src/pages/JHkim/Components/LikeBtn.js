@@ -1,5 +1,5 @@
-import { useState } from "react";
-import "./LikeBtn.scss";
+import { useState } from 'react';
+import './LikeBtn.scss';
 
 function LikeBtn() {
   const [a, setA] = useState(true);
@@ -10,7 +10,7 @@ function LikeBtn() {
         setA(!a);
       }}
     >
-      {a === true ? "🤍" : "🧡"}
+      {a === true ? '🤍' : '🧡'}
     </button>
   );
 }
