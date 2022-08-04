@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+
 import './Login.scss';
 const Login = () => {
-  const navigate = useNavigate();
+  // state
+  const [userId, setUserId] = useState('');
+  const [userPw, setUserPw] = useState('');
 
+  // set 함수
+  const saveUserId = event => {
+    setUserId(event.target.value);
+  };
+  const saveUserPw = event => {
+    setUserPw(event.target.value);
+  };
+
+  // Navigate
+  const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main');
   };
@@ -19,18 +32,16 @@ const Login = () => {
           <input
             className="pwAndId"
             type="text"
-            // onkeyup='buttonactive()'
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            required
-            size="1"
+            value={userId}
+            onChange={saveUserId}
           />
           <input
             className="pwAndId"
             type="password"
-            // onkeyup='buttonactive()'
             placeholder="비밀번호"
-            required
-            size="1"
+            value={userPw}
+            onChange={saveUserPw}
           />
 
           <Link className="link" to="/main">
