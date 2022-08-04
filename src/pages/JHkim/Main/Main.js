@@ -1,6 +1,6 @@
 import React from 'react';
 import Story from '../Components/Story';
-/* import Nav from '../../../components/Nav/Nav'; */
+import Nav from '../../../components/Nav/Nav';
 import Feed from '../Components/Feed';
 import MainRight from '../Components/MainRight';
 import imgRender from '../Components/imgRender';
@@ -9,7 +9,7 @@ import './Main.scss';
 function Main() {
   return (
     <div className="wrap">
-      {/* <Nav title="westargram" /> */}
+      <Nav />
       <main className="main-container">
         <div className="otherAndStory-wrap">
           <div className="main-other-story">

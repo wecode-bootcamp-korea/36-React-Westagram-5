@@ -9,7 +9,7 @@ function Login() {
     password: '',
   });
 
-  function handleInput({ target }) {
+  function savedUserId({ target }) {
     setAccount({
       ...account,
       [target.name]: target.value,
@@ -17,7 +17,7 @@ function Login() {
   }
 
   const linkHandle = () => {
-    navigate(`./Main`, { replace: true });
+    navigate(`/maink`, { replace: true });
   };
 
   const isValidate =
@@ -33,18 +33,18 @@ function Login() {
             type="email"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value={account.email}
-            onChange={handleInput}
+            onChange={savedUserId}
           />
           <input
             name="password"
             type="password"
             placeholder="비밀번호"
             value={account.password}
-            onChange={handleInput}
+            onChange={savedUserId}
           />
           {!isValidate ? (
-            <Link to="/">
-              <button id="login-button" className="submitButton">
+            <Link to="/logink">
+              <button id="login-button" className="submitButton" disabled>
                 로그인
               </button>
             </Link>
@@ -59,7 +59,7 @@ function Login() {
             </button>
           )}
         </form>
-        <Link to="/" className="pwLink">
+        <Link to="/logink" className="pwLink">
           비밀번호를 잊으셨나요?
         </Link>
       </main>
