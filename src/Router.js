@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 
 import LoginJHKim from './pages/JHkim/Login/Login';
 import MainJHKim from './pages/JHkim/Main/Main';
@@ -16,6 +17,7 @@ import MainSYHa from './pages/SYha/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/logink" element={<LoginJHKim />} />
         <Route path="/maink" element={<MainJHKim />} />
