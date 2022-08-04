@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import LikeBtn from './LikeBtn';
+import CommentLi from './CommentLi';
 import './Feed.scss';
 
 function Feed(props) {
@@ -21,12 +21,6 @@ function Feed(props) {
 
   const disableUpload = event => {
     event.preventDefault();
-  };
-
-  const deleteLi = event => {
-    const div = event.target.parentElement;
-    const li = div.parentElement;
-    li.remove();
   };
 
   return (
@@ -72,22 +66,7 @@ function Feed(props) {
         </div>
         <div className="article-comment">
           <ul id="comment-list">
-            {comments.map((comment, idx) => {
-              return (
-                <li id={idx} key={idx} className="new-li">
-                  <span>
-                    <strong>{users}</strong>
-                    {comment}
-                  </span>
-                  <div>
-                    <button id="delete-button" onClick={deleteLi}>
-                      X
-                    </button>
-                    <LikeBtn />
-                  </div>
-                </li>
-              );
-            })}
+            <CommentLi comments={comments} users={users} />
           </ul>
           <div className="comment-input-wrap">
             <form action="#" method="get">
