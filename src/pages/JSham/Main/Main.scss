@@ -1,0 +1,214 @@
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  @include center;
+  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  height: 54px;
+  padding: 30px;
+
+  .headerContents {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    padding: 0 90px;
+  }
+
+  .WestagramTag {
+    display: flex;
+  }
+
+  .WestagramTag a {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+  }
+
+  .headerSearchBar {
+    display: flex;
+    @include center;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+    padding: 5px 5px 5px 5px;
+  }
+
+  input {
+    border: none;
+    width: 230px;
+    padding: 5px;
+  }
+
+  .headerRightImage {
+    display: flex;
+    font-size: 30px;
+  }
+
+  .headerRightImage a {
+    color: black;
+  }
+  .size {
+    height: 25px;
+    margin: 5px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.7fr 1.3fr;
+  grid-template-rows: 90px 30px 70px 500px 250px;
+  width: 75%;
+  margin: auto;
+  padding-top: 56px;
+
+  .story {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 10%;
+    width: 80%;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    font-size: 10px;
+    padding-inline-start: 15px;
+  }
+
+  li {
+    margin: 0 5px;
+  }
+
+  .id {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    max-width: 50px;
+    margin: 0 auto;
+  }
+
+  .story_size {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    overflow-y: hidden;
+  }
+
+  .name {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .name_size {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 2%;
+  }
+
+  .feeds {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border: 1px solid #dedede;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .feed_size {
+    width: 100%;
+    height: 100%;
+  }
+
+  .comment {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #dedede;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top: none;
+  }
+
+  .comment_detail {
+    margin: 10px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img_size {
+    height: 30px;
+    margin: 5px;
+  }
+
+  .profile {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+  }
+
+  .profile_size {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 3%;
+  }
+
+  .recommend {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  .main_right {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    display: flex;
+  }
+
+  .recommendId {
+    display: inline;
+    margin-bottom: 10px;
+  }
+
+  .recommendList {
+    @include center;
+  }
+
+  .recommendSize {
+    height: 40px;
+    border-radius: 50px;
+    align-items: center;
+    margin: 10px 10px 0 0;
+  }
+
+  .recommendDes {
+    font-size: 13px;
+  }
+}
