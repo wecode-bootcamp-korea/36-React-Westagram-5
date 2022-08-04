@@ -128,7 +128,7 @@ function AsideRight() {
     <aside className="aside_right">
       <Wecode />
       <Story />
-      <Recommandation />
+      <Recommendation />
       <Instainfo />
     </aside>
   );
@@ -198,9 +198,9 @@ function Story() {
   );
 }
 
-function Recommandation() {
+function Recommendation() {
   return (
-    <div className="recommandation">
+    <div className="recommendation">
       <div className="top_title">
         <p>회원님을 위한 추천</p>
         <p>모두보기</p>
