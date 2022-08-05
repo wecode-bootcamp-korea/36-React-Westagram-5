@@ -2,12 +2,16 @@ import React from 'react';
 import './Main.scss';
 import Feed from './components/Feed/Feed';
 import RightFeed from './components/RightFeed/RightFeed';
+import Nav from '../../../components/Nav/Nav';
 const Main = () => {
   return (
-    <div className="main">
-      <Feed />
-      <RightFeed />
-    </div>
+    <>
+      <Nav />
+      <div className="main">
+        <Feed />
+        <RightFeed />
+      </div>
+    </>
   );
 };
 
