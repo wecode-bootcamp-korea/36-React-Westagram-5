@@ -1,5 +1,6 @@
 import React from 'react';
 import './Feed.scss';
+import InputComment from './InputComment';
 const Feed = () => {
   return (
     <div className="feedsmain">
@@ -44,28 +45,11 @@ const Feed = () => {
         </div>
         <br />
         <div className="articleTextButton">
-          <ul>
-            <li>
-              S0jae 위워크에서 진행한 꽃꽂이 클래스..a es JHSo/{' '}
-              <span className="gray">더 보기</span>
-              <br />
-              neceosecius 거봐 좋았잖아~~~~
-              <img
-                alt="Feed"
-                className="imog"
-                src="./images/JHSo/1000_F_336983767_dpzS1kFcCW7zyzCc38hru592ayaYhozB.jpeg"
-              />
-            </li>
-          </ul>
+          위워크에서 진행한 꽃꽂이 클래스..
+          <span className="gray">더 보기</span>
+          <br />
         </div>
-
-        <div className="commentbox">
-          <div className="commentList" />
-          <form id="comment" className="articleReply">
-            <input className="reply" type="text" placeholder="댓글달기..." />
-            <button className="replyButton">게시</button>
-          </form>
-        </div>
+        <InputComment />
       </div>
     </div>
   );
