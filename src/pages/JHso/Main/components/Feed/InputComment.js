@@ -16,7 +16,7 @@ const InputComment = () => {
 
   const enter = e => {
     e.preventDefault();
-    if (comment == '') {
+    if (comment === '') {
       return;
     }
     const copyFeedComments = [...feedComments];

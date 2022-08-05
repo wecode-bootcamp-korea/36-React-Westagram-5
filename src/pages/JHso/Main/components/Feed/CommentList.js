@@ -1,10 +1,10 @@
 import React from 'react';
 import './CommentList.scss';
-const CommentList = comment => {
+const CommentList = {key, userName, value } => {
   return (
-    <div key={comment.key} className="commentList">
-      <p className="userName">{comment.userName}</p>
-      <div className="userComment">{comment.value}</div>
+    <div key={key} className="commentList">
+      <p className="userName">{userName}</p>
+      <div className="userComment">{value}</div>
       <p className="userHeart" />
     </div>
   );
