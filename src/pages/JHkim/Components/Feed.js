@@ -5,7 +5,7 @@ import './Feed.scss';
 function Feed(props) {
   const [comments, setComment] = useState([]);
   const [input, setInput] = useState('');
-  const [users, setUsers] = useState(['Wecode Bootcamp ']);
+  const users = 'Wecode Bootcamp ';
 
   const saveComment = event => {
     setInput(event.target.value);

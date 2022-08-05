@@ -1,11 +1,8 @@
-function MainRightStory(props) {
-  let lis = props.onEvent;
+function MainRightStory({ className, onEvent }) {
   return (
-    <>
-      <div className={props.className}>
-        <ul>{lis}</ul>
-      </div>
-    </>
+    <div className={className}>
+      <ul>{onEvent}</ul>
+    </div>
   );
 }
 

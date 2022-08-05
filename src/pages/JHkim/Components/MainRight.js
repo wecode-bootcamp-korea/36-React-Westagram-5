@@ -3,7 +3,7 @@ import MainRightStory from './MainRightStory';
 import './MainRight.scss';
 import './MainRightStory.scss';
 
-function MainRight(props) {
+function MainRight({ userName }) {
   return (
     <div className="main-right-wrap">
       <div className="main-right">
@@ -13,9 +13,9 @@ function MainRight(props) {
           </h2>
           <div>
             <h3>
-              <strong>{props.title}</strong>
+              <strong>{userName}</strong>
             </h3>
-            <p>{props.title}'S account</p>
+            <p>{userName}'S account</p>
           </div>
         </div>
         <MainRightStory className="Right-story" onEvent={imgRender(url)} />

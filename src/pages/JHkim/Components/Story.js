@@ -1,10 +1,9 @@
 import './Story.scss';
 
-function Story(props) {
-  let lis = props.onEvent;
+function Story({ onEvent }) {
   return (
     <div className="story">
-      <ul>{lis}</ul>
+      <ul>{onEvent}</ul>
     </div>
   );
 }

@@ -18,7 +18,7 @@ function Main() {
           <Feed />
           <Feed />
         </div>
-        <MainRight title="HYUKSKEE" onEvent={imgRender(url)} />
+        <MainRight userName="HYUKSKEE" onEvent={imgRender(url)} />
       </main>
     </div>
   );
