@@ -44,13 +44,18 @@ function Login() {
           />
           {!isValidate ? (
             <Link to="/logink">
-              <button id="login-button" className="submitButton" disabled>
+              <button
+                type="submit"
+                id="login-button"
+                className="submitButton"
+                disabled
+              >
                 로그인
               </button>
             </Link>
           ) : (
             <button
-              type="button"
+              type="submit"
               id="login-button"
               className="submitButton validated"
               onClick={linkHandle}
