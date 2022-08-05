@@ -22,7 +22,7 @@ const Article = () => {
           <div>
             <button
               onClick={() => {
-                navigate('/Main');
+                navigate('/mainh');
               }}
             >
               로그인

@@ -1,0 +1,26 @@
+.main_right {
+  grid-column: 2/3;
+  grid-row: 3/5;
+  display: flex;
+
+  .recommendId {
+    display: inline;
+    margin-bottom: 10px;
+  }
+
+  .recommendList {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .recommendSize {
+    height: 40px;
+    border-radius: 50px;
+    align-items: center;
+    margin: 10px 10px 0 0;
+  }
+
+  .recommendDes {
+    font-size: 13px;
+  }
+}

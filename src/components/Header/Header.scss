@@ -1,0 +1,18 @@
+.name {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  align-items: center;
+  border: 1px solid #dedede;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+
+  .name_size {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 2%;
+  }
+}
