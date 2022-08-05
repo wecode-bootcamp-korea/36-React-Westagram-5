@@ -10,7 +10,7 @@ function AsideLeft() {
         <h1 className="profile_name">erin_ha_seoyul</h1>
         <img
           className="dropdownmenu_iconimg img"
-          src={process.env.PUBLIC_URL + '/images/SYHa/option.png'}
+          src="images/SYHa/option.png"
           alt="dropdownIcon"
         />
       </div>
@@ -29,7 +29,7 @@ function AsideLeft() {
         />
         <img
           className="reaction_iconimg img"
-          src="public/images/SYHa/reply.png"
+          src="images/SYHa/reply.png"
           alt=""
         />
         <img
