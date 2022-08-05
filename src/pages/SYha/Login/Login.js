@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 import './Login.scss';
@@ -15,7 +14,7 @@ const Login = () => {
   const saveUserPw = event => {
     setUserPw(event.target.value);
   };
-  const validation = (userId, userPw) => {
+  const Isvalid = (userId, userPw) => {
     return (
       userId.indexOf('@') !== -1 && userId.length >= 6 && userPw.length >= 5
     );
@@ -41,7 +40,7 @@ const Login = () => {
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value={userId}
             onChange={saveUserId}
-            onKeyUp={validation}
+            onKeyUp={Isvalid}
           />
           <input
             className="pwAndId"
@@ -51,16 +50,15 @@ const Login = () => {
             onChange={saveUserPw}
           />
 
-          <Link className="link" to="/mainha">
-            <button
-              className={
-                validation(userId, userPw) ? 'loginbtn' : 'loginbtn_disabled'
-              }
-              disabled={validation(userId, userPw) ? false : true}
-            >
-              로그인
-            </button>
-          </Link>
+          <button
+            className={
+              Isvalid(userId, userPw) ? 'loginbtn' : 'loginbtn_disabled'
+            }
+            disabled={Isvalid(userId, userPw) ? false : true}
+            onClick={goToMain}
+          >
+            로그인
+          </button>
         </form>
 
         <footer>
