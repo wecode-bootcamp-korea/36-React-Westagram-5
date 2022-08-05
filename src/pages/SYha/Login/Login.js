@@ -24,7 +24,7 @@ const Login = () => {
   // Navigate
   const navigate = useNavigate();
   const goToMain = () => {
-    navigate('/main');
+    navigate('/mainha');
   };
 
   return (
@@ -51,7 +51,7 @@ const Login = () => {
             onChange={saveUserPw}
           />
 
-          <Link className="link" to="/main">
+          <Link className="link" to="/mainha">
             <button
               className="loginbtn"
               disabled={validation(userId, userPw) === true ? false : true}
