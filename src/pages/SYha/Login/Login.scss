@@ -40,8 +40,14 @@
       .link {
         margin-top: 15px;
 
-        .loginbtn:disabled {
+        .loginbtn_disabled {
           background-color: #c4e1fb;
+          border-radius: 10px;
+          height: 50px;
+          width: 360px;
+          border: 1px solid white;
+          color: white;
+          font-size: 20px;
         }
         .loginbtn {
           background-color: #0095f6;

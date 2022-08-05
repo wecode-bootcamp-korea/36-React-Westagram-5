@@ -53,8 +53,10 @@ const Login = () => {
 
           <Link className="link" to="/mainha">
             <button
-              className="loginbtn"
-              disabled={validation(userId, userPw) === true ? false : true}
+              className={
+                validation(userId, userPw) ? 'loginbtn' : 'loginbtn_disabled'
+              }
+              disabled={validation(userId, userPw) ? false : true}
             >
               로그인
             </button>
