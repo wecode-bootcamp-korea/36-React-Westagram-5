@@ -1,3 +1,5 @@
+import './Aside_left.scss';
+
 function AsideLeft() {
   return (
     <aside className="aside_left">

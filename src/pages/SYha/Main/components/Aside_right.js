@@ -3,6 +3,7 @@ import Wecode from './Wecode';
 import Story from './Story';
 import Recommendation from './Recommendation';
 import Instainfo from './Instainfo';
+import './Aside_right.scss';
 
 function AsideRight() {
   return (

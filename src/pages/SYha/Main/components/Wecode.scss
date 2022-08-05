@@ -1,0 +1,16 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
+
+.wecode {
+  width: 75%;
+  height: 8%;
+  justify-content: space-around;
+  font-size: 14px;
+
+  .wecode_logo {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+  }
+}

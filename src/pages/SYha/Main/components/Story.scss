@@ -1,0 +1,48 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
+
+.story {
+  height: 30%;
+  border: 1.5px solid $lineColor;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  .top_title {
+    font-size: 13px;
+    display: flex;
+    height: 20%;
+    justify-content: space-between;
+    padding: 10px 10px;
+  }
+  .top_title > p:first-child {
+    color: #9d9d9d;
+  }
+  .instagramlist_wrap {
+    overflow: auto;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+
+    .instagralist {
+      display: flex;
+      font-size: 12px;
+      padding: 3px 10px 3px;
+      align-items: center;
+      position: relative;
+      height: 35px;
+
+      .insta_logo {
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+        padding: 1.5px;
+        border: 1.5px solid #d301c5;
+      }
+    }
+  }
+}

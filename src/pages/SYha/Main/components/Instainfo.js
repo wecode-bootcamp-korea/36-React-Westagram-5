@@ -1,3 +1,5 @@
+import './Instainfo.scss';
+
 function Instainfo() {
   return (
     <div className="instainfo">

@@ -1,3 +1,5 @@
+import './Wecode.scss';
+
 function Wecode() {
   return (
     <div className="wecode flex">

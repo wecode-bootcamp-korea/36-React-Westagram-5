@@ -1,0 +1,132 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
+
+.aside_left {
+  width: 60%;
+  height: 100%;
+  border: 1.5px solid $lineColor;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+
+  .feedhead {
+    height: 8.5%;
+    padding: 10px;
+    position: relative;
+    font-size: 17px;
+    font-weight: 900;
+
+    .profile_img {
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .dropdownmenu_iconimg {
+      width: 20px;
+      height: 20px;
+      margin-left: 300px;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  .feedimg {
+    height: 65%;
+    margin: 0px;
+    object-fit: cover;
+  }
+
+  .reaction_icon_wrap {
+    height: 6%;
+    padding: 0px 10px;
+    position: relative;
+
+    .reaction_iconimg {
+      width: 18px;
+      height: 18px;
+      margin: 5px 8px;
+    }
+    .saveicon {
+      position: absolute;
+      right: 10px;
+    }
+  }
+  .show_like_wrap {
+    height: 4%;
+    padding: 0px 5px;
+    font-size: 12.5px;
+
+    .friendProfile_img {
+      width: 20px;
+      height: 20px;
+      margin: 0px 8px;
+      border-radius: 100px;
+    }
+  }
+  .feed_discription_wrap,
+  .comment_list {
+    margin-left: 10px;
+    font-size: 12.5px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 70px;
+
+    .discription {
+      margin: 3px;
+      position: relative;
+    }
+    .timecount {
+      color: $lineColor;
+      margin: 0px 4px;
+    }
+
+    .button {
+      background: white;
+      color: #c4e1fb;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      position: absolute;
+      right: 20px;
+      top: 40%;
+    }
+  }
+}
+.addcomment {
+  font-size: 15px;
+  width: 100%;
+  position: relative;
+  position: absolute;
+  bottom: 0px;
+  .commentinputbox {
+    width: 100%;
+    border-style: none;
+    height: 50px;
+    border-top: 1px solid $lineColor;
+    padding: 10px;
+  }
+  .button {
+    background: white;
+    color: #c4e1fb;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+  }
+}
+
+// .joayo {
+//   width: 18px;
+//   height: 18px;
+//   position: absolute;
+//   right: 5px;
+// }
