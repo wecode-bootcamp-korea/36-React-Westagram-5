@@ -9,7 +9,7 @@ function Login() {
     password: '',
   });
 
-  function savedUserId({ target }) {
+  function savedUserAccount({ target }) {
     setAccount({
       ...account,
       [target.name]: target.value,
@@ -33,19 +33,19 @@ function Login() {
             type="email"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value={account.email}
-            onChange={savedUserId}
+            onChange={savedUserAccount}
           />
           <input
             name="password"
             type="password"
             placeholder="비밀번호"
             value={account.password}
-            onChange={savedUserId}
+            onChange={savedUserAccount}
           />
           {!isValidate ? (
             <Link to="/logink">
               <button
-                type="submit"
+                type="button"
                 id="login-button"
                 className="submitButton"
                 disabled
