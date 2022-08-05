@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import CommentList from './CommentList';
 import './InputComment.scss';
 const InputComment = () => {
-  let [userName] = useState('s0jae');
-  let [comment, setcomment] = useState('');
-  let [feedComments, setFeedComments] = useState([]);
-  let [isValid, setIsValid] = useState(false);
+  const userName = 's0jae';
+  const [comment, setcomment] = useState('');
+  const [feedComments, setFeedComments] = useState([]);
+  const [isValid, setIsValid] = useState(false);
 
-  let post = e => {
+  const post = e => {
     const copyFeedComments = [...feedComments];
     copyFeedComments.push(comment);
     setFeedComments(copyFeedComments);
