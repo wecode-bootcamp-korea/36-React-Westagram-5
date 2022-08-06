@@ -3,7 +3,7 @@ import CommentList from './CommentList';
 import './InputComment.scss';
 const InputComment = () => {
   const userName = 's0jae';
-  const [comment, setcomment] = useState('');
+  const [comment, setComment] = useState('');
   const [feedComments, setFeedComments] = useState([]);
   const [isValid, setIsValid] = useState(false);
 
@@ -11,7 +11,7 @@ const InputComment = () => {
     const copyFeedComments = [...feedComments];
     copyFeedComments.push(comment);
     setFeedComments(copyFeedComments);
-    setcomment('');
+    setComment('');
   };
 
   const enter = e => {
@@ -22,7 +22,7 @@ const InputComment = () => {
     const copyFeedComments = [...feedComments];
     copyFeedComments.push(comment);
     setFeedComments(copyFeedComments);
-    setcomment('');
+    setComment('');
   };
 
   return (
@@ -36,7 +36,7 @@ const InputComment = () => {
           type="text"
           placeholder="댓글달기..."
           onChange={e => {
-            setcomment(e.target.value);
+            setComment(e.target.value);
           }}
           onKeyUp={e => {
             e.target.value.length > 0 ? setIsValid(true) : setIsValid(false);
