@@ -47,7 +47,7 @@ const InputComment = () => {
           type="button"
           className={comment.length > 0 ? 'replyButton' : 'replyButtondisabled'}
           onClick={post}
-          disabled={isValid ? false : true}
+          disabled={!isValid}
         >
           게시
         </button>
