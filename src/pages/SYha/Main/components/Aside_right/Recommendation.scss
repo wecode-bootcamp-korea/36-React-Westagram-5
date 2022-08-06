@@ -1,8 +1,8 @@
-@import '../../styles/mixin.scss';
-@import '../../styles/variables.scss';
-@import '../../styles/common.scss';
+@import '../../../styles/mixin.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/common.scss';
 
-.story {
+.recommendation {
   height: 30%;
   border: 1.5px solid $lineColor;
   margin-top: 10px;
@@ -20,6 +20,7 @@
   .top_title > p:first-child {
     color: #9d9d9d;
   }
+
   .instagramlist_wrap {
     overflow: auto;
     height: 80%;
@@ -27,21 +28,39 @@
     flex-direction: column;
     padding-top: 5px;
 
-    .instagralist {
+    .instagramlist {
       display: flex;
       font-size: 12px;
-      padding: 3px 10px 3px;
-      align-items: center;
+      padding-left: 10px;
+      margin-top: 5px;
       position: relative;
-      height: 35px;
+      height: 40px;
 
       .insta_logo {
         border-radius: 100%;
         width: 30px;
         height: 30px;
         margin-right: 15px;
-        padding: 1.5px;
-        border: 1.5px solid #d301c5;
+      }
+
+      .whofollow {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 110px;
+        height: 20px;
+      }
+
+      .follow {
+        color: #3897f0;
+        position: relative;
+        border: none;
+        background: none;
+        padding: 0;
+        font-weight: 500;
+        position: absolute;
+        right: 10px;
       }
     }
   }

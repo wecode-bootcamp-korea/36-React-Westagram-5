@@ -1,8 +1,8 @@
 import React from 'react';
-import Wecode from './Wecode';
-import Story from './Story';
-import Recommendation from './Recommendation';
-import Instainfo from './Instainfo';
+import Wecode from './Aside_right/Wecode';
+import Story from './Aside_right/Story';
+import Recommendation from './Aside_right/Recommendation';
+import Instainfo from './Aside_right/Instainfo';
 import './Aside_right.scss';
 
 function AsideRight() {

@@ -1,6 +1,29 @@
+import React, { useState } from 'react';
 import './Aside_left.scss';
+import Newcomment from './Aside_left/Newcomment';
 
 function AsideLeft() {
+  const [comment, setComment] = useState('');
+  const [commentList, setCommentList] = useState([]);
+  const [plceholder, setPlceholder] = useState('댓글 달기...');
+
+  const remove = () => {
+    setPlceholder('');
+  };
+
+  //1번 함수
+  const getInputValue = event => {
+    setComment(event.target.value);
+  };
+
+  //2번 함수
+  const addToList = e => {
+    e.preventDefault();
+    setCommentList([...commentList, comment]);
+    setComment('');
+    setPlceholder('댓글 달기...');
+  };
+
   return (
     <aside className="aside_left">
       <div className="feedhead flex">
@@ -63,16 +86,24 @@ function AsideLeft() {
         </p>
       </div>
 
-      <div className="comment_list">
-        <p className="timecount">42분전</p>
+      <div className="comment_wrap">
+        {commentList.map((item, index) => (
+          <Newcomment comment={item} key={index} /> // 3. map 함수로 배열에 저장되어 있는 입력값들을 Newcomment 컴포넌트로 넘겨줌
+        ))}
       </div>
-      <form className="addcomment">
+      <form className="addcomment" onSubmit={addToList}>
+        {/*2. 값이 submit되면 배열로 저장해주는 함수 생성*/}
         <input
           className="commentinputbox"
           type="text"
-          placeholder="댓글 달기..."
+          placeholder={plceholder}
+          value={comment}
+          onChange={getInputValue} //1. 사용자가 입력을 시작하면 값을 담아주는 함수 생성
+          onClick={remove}
         />
-        <button className="submit button">게시</button>
+        <button disabled={comment.length > 0 ? false : true} className="button">
+          게시
+        </button>
       </form>
     </aside>
   );
