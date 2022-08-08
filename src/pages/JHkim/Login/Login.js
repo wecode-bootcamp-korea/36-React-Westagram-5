@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import LoginBtn from './Components/LoginBtn';
 import './Login.scss';
 
 function Login() {
-  const navigate = useNavigate();
   const [account, setAccount] = useState({
     email: '',
     password: '',
@@ -15,10 +15,6 @@ function Login() {
       [target.name]: target.value,
     });
   }
-
-  const linkHandle = () => {
-    navigate(`/maink`, { replace: true });
-  };
 
   const isValidate =
     account.email.includes('@') && account.password.length >= 5;
@@ -43,25 +39,13 @@ function Login() {
             onChange={savedUserAccount}
           />
           {!isValidate ? (
-            <Link to="/logink">
-              <button
-                type="button"
-                id="login-button"
-                className="submitButton"
-                disabled
-              >
-                로그인
-              </button>
-            </Link>
+            <LoginBtn to="/logink" className="submitButton" disabled={true} />
           ) : (
-            <button
-              type="submit"
-              id="login-button"
+            <LoginBtn
+              to="/maink"
               className="submitButton validated"
-              onClick={linkHandle}
-            >
-              로그인
-            </button>
+              disabled={false}
+            />
           )}
         </form>
         <Link to="/logink" className="pwLink">

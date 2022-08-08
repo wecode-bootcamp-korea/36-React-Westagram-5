@@ -1,7 +1,9 @@
-import imgRender from './imgRender';
 import MainRightStory from './MainRightStory';
+import imgRender from './imgRender';
+import Footer from './Footer';
 import './MainRight.scss';
 import './MainRightStory.scss';
+import './Footer.scss';
 
 function MainRight({ userName }) {
   return (
@@ -21,6 +23,7 @@ function MainRight({ userName }) {
         <MainRightStory className="Right-story" onEvent={imgRender(url)} />
         <MainRightStory className="recommend-story" onEvent={imgRender(url)} />
       </div>
+      <Footer />
     </div>
   );
 }
