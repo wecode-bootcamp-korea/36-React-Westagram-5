@@ -10,7 +10,6 @@ function AsideLeft() {
   const remove = () => {
     setPlceholder('');
   };
-
   //1번 함수
   const getInputValue = event => {
     setComment(event.target.value);
@@ -88,7 +87,8 @@ function AsideLeft() {
 
       <div className="comment_wrap">
         {commentList.map((item, index) => (
-          <Newcomment comment={item} key={index} /> // 3. map 함수로 배열에 저장되어 있는 입력값들을 Newcomment 컴포넌트로 넘겨줌
+          <Newcomment comment={item} key={index} />
+          // 3. map 함수로 배열에 저장되어 있는 입력값들을 Newcomment 컴포넌트로 넘겨줌
         ))}
       </div>
       <form className="addcomment" onSubmit={addToList}>

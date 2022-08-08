@@ -1,8 +1,8 @@
 import React from 'react';
 import './Newcomment.scss';
 
-const Newcomment = props => {
-  const { comment } = props;
+const Newcomment = ({ comment }) => {
+  // const { comment, key } = props;
   // const delete = () => {
 
   // }
@@ -14,7 +14,7 @@ const Newcomment = props => {
         <strong>IamFriend </strong>
         <p>{comment}</p>
       </div>
-      <span onClick={() => alert('hi')}>X</span>
+      <span>X</span>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
-import './Main.scss';
 import AsideLeft from './components/Aside_left';
 import AsideRight from './components/Aside_right';
 import Nav from './components/Nav';
+import './Main.scss';
 
 const Main = () => {
   return (
