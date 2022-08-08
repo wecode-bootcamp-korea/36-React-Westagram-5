@@ -1,8 +1,8 @@
 import React from 'react';
-import './Main.scss';
+import Nav from '../../../components/Nav/Nav';
 import Feed from './components/Feed/Feed';
 import RightFeed from './components/RightFeed/RightFeed';
-import Nav from '../../../components/Nav/Nav';
+import './Main.scss';
 const Main = () => {
   return (
     <>

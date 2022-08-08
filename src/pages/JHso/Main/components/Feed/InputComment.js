@@ -3,8 +3,11 @@ import CommentList from './CommentList';
 import './InputComment.scss';
 const InputComment = () => {
   const userName = 's0jae';
+
   const [comment, setComment] = useState('');
+
   const [feedComments, setFeedComments] = useState([]);
+
   const [isValid, setIsValid] = useState(false);
 
   const post = e => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import './Feed.scss';
 import InputComment from './InputComment';
+import './Feed.scss';
 const Feed = () => {
   return (
     <div className="feedsmain">
