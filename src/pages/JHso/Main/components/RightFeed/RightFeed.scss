@@ -58,35 +58,6 @@
     position: absolute;
     top: 8px;
   }
-  .rightMiddle {
-    width: 250px;
-    height: 40px;
-    align-items: center;
-    display: flex;
-    position: relative;
-
-    .middle {
-      border-radius: 100%;
-      width: 25px;
-      height: 25px;
-      margin-left: 10px;
-    }
-  }
-  .bootcamp {
-    margin-left: 10px;
-
-    .gray {
-      color: #c1c0c0;
-    }
-
-    .toptext {
-      font-weight: 700;
-    }
-
-    .rightWecode {
-      font-size: small;
-    }
-  }
 }
 
 .rightBottom {
@@ -153,13 +124,4 @@
       color: #0088ff;
     }
   }
-}
-
-.Information {
-  margin-top: 15px;
-  border: 0px solid;
-  width: 250px;
-  height: 100px;
-  font-size: small;
-  color: #c1c0c0;
 }

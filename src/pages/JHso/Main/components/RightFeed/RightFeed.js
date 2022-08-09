@@ -1,5 +1,9 @@
 import React from 'react';
 import './RightFeed.scss';
+import RightStory from './Story/RightStory';
+import { STORY_IMG } from './Story/RightData';
+import Information from './Information/Information';
+import { INFORMATION_TEXT } from './Information/InformationData';
 const RightFeed = () => {
   return (
     <div className="feedsRight">
@@ -13,34 +17,14 @@ const RightFeed = () => {
       <div className="rightCenter">
         <p className="pcenter">스토리</p>
         <span className="centertext">모두 보기</span>
-        <div className="rightMiddle">
-          <img alt="story" className="middle" src="./images/JHSo/1.jpg" />
-          <div className="bootcamp">
-            <p className="toptext">_yom_s</p>
-            <p className="gray rightWecode">16분전</p>
-          </div>
-        </div>
-        <div className="rightMiddle">
-          <img alt="story" className="middle" src="./images/JHSo/2.jpg" />
-          <div className="bootcamp">
-            <p className="toptext">drink_eat_drink</p>
-            <p className="gray rightWecode">3시간 전</p>
-          </div>
-        </div>
-        <div className="rightMiddle">
-          <img alt="story" className="middle" src="./images/JHSo/3.jpg" />
-          <div className="bootcamp">
-            <p className="toptext">hyukyc</p>
-            <p className="gray rightWecode">20시간 전</p>
-          </div>
-        </div>
-        <div className="rightMiddle">
-          <img alt="story" className="middle" src="./images/JHSo/4.jpg" />
-          <div className="bootcamp">
-            <p className="toptext">jmunkeek</p>
-            <p className="gray rightWecode">54분전</p>
-          </div>
-        </div>
+        {STORY_IMG.map(story => (
+          <RightStory
+            key={story.id}
+            img={story.img}
+            userId={story.userId}
+            time={story.time}
+          />
+        ))}
       </div>
       <div className="rightBottom">
         <p className="pcenter">회원님을 위한 추천</p>
@@ -72,16 +56,13 @@ const RightFeed = () => {
         </div>
       </div>
       <div className="Information">
-        <p>
-          Instagram 정보 &middot; 지원 &middot; 홍보 &middot; 센터 &middot; API
-          &middot;
-          <br />
-          채용정보 &middot; 개인정보처리방침 &middot; 약관 &middot;
-          <br />
-          디렉터리 &middot; 프로필 &middot; 해시태그 &middot; 언어
-        </p>
+        {INFORMATION_TEXT.map(info => (
+          <Information key={info.id} text={info.text} />
+        ))}
         <br />
-        <br />ⓒ 2019 INSTAGRAM
+        <br />
+        <br />
+        <p>ⓒ 2019 INSTAGRAM</p>
       </div>
     </div>
   );
