@@ -3,9 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
-  const isValid = id.includes('@') && pw.length >= 5;
+  const [userInfo, setUserInfo] = useState({ id: '', pw: '' });
+
+  const getUserInfo = e => {
+    const { name, value } = e.target;
+    setUserInfo({ ...userInfo, [name]: value });
+  };
+  const isValid = userInfo.id.includes('@') && userInfo.pw.length >= 5;
   const navigate = useNavigate();
 
   const goToMain = () => {
@@ -17,20 +21,18 @@ const Login = () => {
       <form className="loginForm">
         <div className="loginSection" onSubmit={e => e.preventDefault()}>
           <input
+            name="id"
             className="loginId"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             type="text"
-            onChange={e => {
-              setId(e.target.value);
-            }}
+            onChange={getUserInfo}
           />
           <input
+            name="pw"
             className="loginPwd"
             placeholder="비밀번호"
             type="password"
-            onChange={e => {
-              setPw(e.target.value);
-            }}
+            onChange={getUserInfo}
           />
           <div className="loginbutton">
             <button
