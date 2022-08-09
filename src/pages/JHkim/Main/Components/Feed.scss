@@ -43,30 +43,3 @@
     }
   }
 }
-
-.article-comment {
-  padding: 10px;
-
-  input {
-    width: 470px;
-    outline: none;
-    border: none;
-  }
-}
-
-.comment-input-wrap form {
-  display: flex;
-  align-items: center;
-  padding-top: 5px;
-  margin-top: 5px;
-  border-top: 1px solid #efefef;
-
-  button {
-    width: 50px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 900;
-    color: #0095f6;
-    background-color: rgba(178, 164, 255, 0.2);
-  }
-}
