@@ -21,7 +21,7 @@ const Feed = ({ userId, feedImg, desc }) => {
     setComment('');
     setPlceholder('댓글 달기...');
   };
-  console.log(userId, feedImg, desc);
+
   return (
     <aside className="feed">
       <div className="feedhead flex">
