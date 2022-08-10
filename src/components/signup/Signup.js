@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Login.scss';
-import { useNavigate } from 'react-router-dom';
 
 const Article = () => {
   const [userId, setUserId] = useState('');
