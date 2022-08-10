@@ -9,6 +9,10 @@ const Comment = () => {
         <img src="images/JSham/comment.png" className="img_size" />
         <img src="images/JSham/dm.png" className="img_size" />
       </div>
+      <div>
+        <span className="emphasis">ok.soosoo</span> 님
+        <span className="emphasis">외 10명</span>이 좋아합니다
+      </div>
     </section>
   );
 };

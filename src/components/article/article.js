@@ -10,9 +10,9 @@ const Article = () => {
   const saveUserPwd = event => {
     setUserPwd(event.target.value);
   };
-  const Isvalid = (userId, userPw) => {
+  const Isvalid = (userId, userPwd) => {
     return (
-      userId.indexOf('@') !== -1 && userId.length >= 6 && userPw.length >= 5
+      userId.indexOf('@') !== -1 && userId.length >= 6 && userPwd.length >= 5
     );
   };
   const navigate = useNavigate();
