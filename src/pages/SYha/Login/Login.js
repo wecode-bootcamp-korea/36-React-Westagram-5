@@ -26,9 +26,9 @@ const Login = () => {
 
   // Navigate
   const navigate = useNavigate();
-  const goToMain = () => {
-    navigate('/mainha');
-  };
+  // const goToMain = () => {
+  //   navigate('/mainha');
+  // };
 
   // 회원가입
   const signup = e => {
@@ -62,14 +62,17 @@ const Login = () => {
       }),
     })
       .then(response => response.json())
-      .then(data => localStorage.setItem('token', data));
+      .then(data => localStorage.setItem('token', JSON.stringify(data)));
+    if (localStorage.token) {
+      navigate('/mainha');
+    }
   };
 
   return (
     <main className="body flex login_main">
       <article className="mainBox">
         <header className="login_mainlogo">
-          <h1 onClick={goToMain}>Westagram</h1>
+          <h1>Westagram</h1>
         </header>
         <form className="flex form">
           <input
