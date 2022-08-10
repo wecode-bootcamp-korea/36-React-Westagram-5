@@ -7,37 +7,61 @@ const Story = () => {
       <ul>
         <li>
           <div>
-            <img src="images/JSham/story_profile.jpg" className="story_size" />
+            <img
+              src="images/JSham/story_profile.jpg"
+              className="story_size"
+              alt="profile"
+            />
           </div>
           <div className="id">clean_0828</div>
         </li>
         <li>
           <div>
-            <img src="images/JSham/story_profile2.jpg" className="story_size" />
+            <img
+              src="images/JSham/story_profile2.jpg"
+              className="story_size"
+              alt="profile"
+            />
           </div>
           <div className="id">taeyeon_ss</div>
         </li>
         <li>
           <div>
-            <img src="images/JSham/story_profile3.jpg" className="story_size" />
+            <img
+              src="images/JSham/story_profile3.jpg"
+              className="story_size"
+              alt="profile"
+            />
           </div>
           <div className="id">dlwlrma</div>
         </li>
         <li>
           <div>
-            <img src="images/JSham/story_profile4.jpg" className="story_size" />
+            <img
+              src="images/JSham/story_profile4.jpg"
+              className="story_size"
+              alt="profile"
+            />
           </div>
           <div className="id">jennierubyjane</div>
         </li>
         <li>
           <div>
-            <img src="images/JSham/story_profile5.jpg" className="story_size" />
+            <img
+              src="images/JSham/story_profile5.jpg"
+              className="story_size"
+              alt="profile"
+            />
           </div>
           <div className="id">yuqisong.923</div>
         </li>
         <li>
           <div>
-            <img src="images/JSham/story_profile6.jpg" className="story_size" />
+            <img
+              src="images/JSham/story_profile6.jpg"
+              className="story_size"
+              alt="profile"
+            />
           </div>
           <div className="id">yoona_lim</div>
         </li>

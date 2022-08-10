@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Login.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Article = () => {
@@ -12,12 +13,20 @@ const Article = () => {
   };
   const Isvalid = (userId, userPwd) => {
     return (
-      userId.indexOf('@') !== -1 && userId.length >= 6 && userPwd.length >= 5
+      userId.indexOf('@') !== -1 && userId.length >= 5 && userPwd.length >= 5
     );
   };
-  const navigate = useNavigate();
   const goToMain = () => {
-    navigate('/mainh');
+    fetch('10.58.5.66:3000/auth/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: userId,
+        password: userPwd,
+      }),
+    });
   };
 
   return (

@@ -4,7 +4,11 @@ import './Header.scss';
 const Header = () => {
   return (
     <header className="name">
-      <img src="images/JSham/main_profile.jpg" className="name_size" />
+      <img
+        src="images/JSham/main_profile.jpg"
+        className="name_size"
+        alt="profile"
+      />
       <p>ok.soosoo</p>
     </header>
   );

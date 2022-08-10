@@ -6,7 +6,7 @@ import Feeds from '../../../components/Feeds/Feeds';
 import Comment from '../../../components/Comment/Comment';
 import Profile from '../../../components/Profile/Profile';
 import Recommend from '../../../components/Recommend/Recommend';
-import Main_right from '../../../components/Main_right/Main_right';
+import MainRight from '../../../components/MainRight/MainRight';
 
 const Main = () => {
   return (
@@ -19,7 +19,7 @@ const Main = () => {
         <Comment />
         <Profile />
         <Recommend />
-        <Main_right />
+        <MainRight />
       </main>
     </div>
   );
