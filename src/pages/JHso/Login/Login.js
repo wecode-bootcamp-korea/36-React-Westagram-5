@@ -11,10 +11,10 @@ const Login = () => {
   };
   const isValid = userInfo.id.includes('@') && userInfo.pw.length >= 5;
   const navigate = useNavigate();
-
   const goToMain = () => {
     navigate('/mains');
   };
+
   return (
     <main className="login">
       <div className="loginTitle">westagram</div>
@@ -53,3 +53,39 @@ const Login = () => {
 };
 
 export default Login;
+
+// function dataSend(e) {
+//   e.preventDefault();
+//   fetch('http://10.58.6.117:3000/auth/signup', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({
+//       email: userInfo.id,
+//       password: userInfo.pw,
+//     }),
+//   })
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+// }
+// function dataSend(e) {
+//   e.preventDefault();
+//   fetch('http://10.58.6.117:3000/auth/signin', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({
+//       email: userInfo.id,
+//       password: userInfo.pw,
+//     }),
+//   })
+//     .then(response => {
+//       if (response.ok === true) {
+//         navigate('/mains');
+//       }
+//       throw new Error('에러 발생!'); //reponse.ok가 true가 아닐 경우 error를 throw
+//     })
+//     .catch(error => console.log(error));
+// }
