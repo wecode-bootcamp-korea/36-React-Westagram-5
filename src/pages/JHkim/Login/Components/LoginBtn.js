@@ -1,18 +1,16 @@
-import { Link } from 'react-router-dom';
 import './LoginBtn.scss';
 
-function LoginBtn({ to, className, disabled }) {
+function LoginBtn({ className, disabled, onClick }) {
   return (
-    <Link to={to}>
-      <button
-        className={className}
-        type="button"
-        id="login-button"
-        disabled={disabled}
-      >
-        로그인
-      </button>
-    </Link>
+    <button
+      className={className}
+      type="submit"
+      id="login-button"
+      disabled={disabled}
+      onClick={onClick}
+    >
+      로그인
+    </button>
   );
 }
 

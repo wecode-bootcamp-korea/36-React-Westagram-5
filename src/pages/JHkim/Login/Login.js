@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LoginBtn from './Components/LoginBtn';
 import './Login.scss';
 
 function Login() {
+  const navigate = useNavigate();
   const [account, setAccount] = useState({
     email: '',
     password: '',
@@ -18,6 +19,33 @@ function Login() {
 
   const isValidate =
     account.email.includes('@') && account.password.length >= 5;
+
+  const loginHandle = e => {
+    e.preventDefault();
+    fetch('http://10.58.6.178:3333/auth/signin', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        email: account.email,
+        password: account.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(data =>
+        localStorage.setItem(Object.keys(data)[0], Object.values(data)[0])
+      );
+    if (localStorage.getItem('accessToken')) {
+      navigate('/maink');
+    } else if (localStorage.getItem('message') === 'invalid password') {
+      navigate('/logink');
+      alert('비밀번호가 틀립니다.');
+    } else if (
+      localStorage.getItem('message') === 'specified user does not exist'
+    ) {
+      navigate('/logink');
+      alert('email을 다시 입력해주세요.');
+    }
+  };
 
   return (
     <div className="container">
@@ -39,12 +67,14 @@ function Login() {
             onChange={savedUserAccount}
           />
           {!isValidate ? (
-            <LoginBtn to="/logink" className="submitButton" disabled={true} />
+            <Link to="/logink">
+              <LoginBtn to="/logink" className="submitButton" disabled={true} />
+            </Link>
           ) : (
             <LoginBtn
-              to="/maink"
               className="submitButton validated"
               disabled={false}
+              onClick={loginHandle}
             />
           )}
         </form>
