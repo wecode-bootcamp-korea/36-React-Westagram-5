@@ -1,55 +1,58 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import InputComment from './InputComment';
 import './Feed.scss';
+
 const Feed = () => {
+  const [feed, setFeed] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/FeedData.json')
+      .then(respose => respose.json())
+      .then(result => setFeed(result));
+  }, []);
+
   return (
     <div className="feedsmain">
       <div className="feeds">
-        <div className="imgtop">
-          <img
-            alt="Feed"
-            className="porfile"
-            src="./images/JHSo/733080D4-CFEC-4792-A206-EBF493F57B89.jpg"
-          />
-          S0jae
-          <img
-            alt="Feed"
-            className="porfilemenu"
-            src="./images/JHSo/8035118.png"
-          />
-        </div>
-        <div className="article">
-          <img
-            alt="Feed"
-            className="articleImg"
-            src="./images/JHSo/kyle-cleveland-8y2v6ijBiBo-unsplash.jpg"
-          />
-        </div>
-        <div className="articleicon">
-          <img alt="Feed" className="aicon" src="./images/JHSo/2107845.png" />
-          <img alt="Feed" className="aicon" src="./images/JHSo/151789.png" />
-          <img alt="Feed" className="aicon" src="./images/JHSo/2089736.png" />
-          <img
-            alt="Feed"
-            className="aicon save"
-            src="./images/JHSo/5662990.png"
-          />
-        </div>
-        <div className="articleText">
-          <img
-            alt="Feed"
-            className="porfileArticle"
-            src="./images/JHSo/IMG_6377.JPG"
-          />{' '}
-          wecode님 외 1000명이 좋하합니다
-        </div>
-        <br />
-        <div className="articleTextButton">
-          위워크에서 진행한 꽃꽂이 클래스..
-          <span className="gray">더 보기</span>
-          <br />
-        </div>
-        <InputComment />
+        {feed.map(feed => {
+          return (
+            <div className="FeedTwo" key={feed.id}>
+              <div className="imgtop">
+                <img alt="Feed" className="porfile" src={feed.porfile_img} />
+                {feed.name}
+                <img alt="Feed" className="porfilemenu" src={feed.side_img} />
+              </div>
+              <div className="article">
+                <img alt="Feed" className="articleImg" src={feed.center_img} />
+              </div>
+              <div className="articleicon">
+                <img alt="Feed" className="aicon" src={feed.icon_img} />
+                <img alt="Feed" className="aicon" src={feed.icon_two_img} />
+                <img alt="Feed" className="aicon" src={feed.icon_third_img} />
+                <img
+                  alt="Feed"
+                  className="aicon save"
+                  src={feed.icon_right_img}
+                />
+              </div>
+              <div className="articleText">
+                <img
+                  alt="Feed"
+                  className="porfileArticle"
+                  src={feed.feed_profile_img}
+                />
+                {feed.post}
+              </div>
+              <br />
+              <div className="articleTextButton">
+                {feed.comment}
+                <span className="gray">{feed.view}</span>
+                <br />
+              </div>
+              <InputComment />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
