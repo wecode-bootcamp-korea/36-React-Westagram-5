@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './Login.scss';
@@ -44,7 +44,7 @@ const Login = () => {
       }),
     })
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data => data);
   };
 
   // 로그인

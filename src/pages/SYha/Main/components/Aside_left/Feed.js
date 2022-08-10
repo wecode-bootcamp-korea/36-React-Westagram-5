@@ -5,11 +5,6 @@ import Newcomment from './Newcomment';
 const Feed = ({ userId, feedImg, desc }) => {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
-  const [plceholder, setPlceholder] = useState('댓글 달기...');
-
-  const remove = () => {
-    setPlceholder('');
-  };
 
   const getInputValue = event => {
     setComment(event.target.value);
@@ -19,7 +14,6 @@ const Feed = ({ userId, feedImg, desc }) => {
     e.preventDefault();
     setCommentList([...commentList, comment]);
     setComment('');
-    setPlceholder('댓글 달기...');
   };
 
   return (
@@ -84,10 +78,9 @@ const Feed = ({ userId, feedImg, desc }) => {
         <input
           className="commentinputbox"
           type="text"
-          placeholder={plceholder}
+          placeholder="댓글달기...."
           value={comment}
           onChange={getInputValue}
-          onClick={remove}
         />
         <button disabled={comment.length > 0 ? false : true} className="button">
           게시
