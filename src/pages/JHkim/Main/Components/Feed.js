@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import CommentLi from './CommentLi';
 import './Feed.scss';
 
-function Feed(props) {
+function Feed() {
   const [feed, setFeed] = useState([]);
 
   useEffect(() => {
