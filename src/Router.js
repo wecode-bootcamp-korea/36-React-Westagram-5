@@ -17,7 +17,7 @@ import MainSYHa from './pages/SYha/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
-      {/* <Nav /> */}
+      <Nav />
       <Routes>
         <Route path="/logink" element={<LoginJHKim />} />
         <Route path="/maink" element={<MainJHKim />} />

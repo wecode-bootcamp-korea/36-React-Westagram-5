@@ -41,7 +41,8 @@
 
   .reaction_icon_wrap {
     height: 5%;
-    padding: 0px 10px;
+    padding: 10px 10px;
+    margin-bottom: 5px;
     position: relative;
 
     .reaction_iconimg {
@@ -78,22 +79,17 @@
     font-size: 12.5px;
 
     .discription {
-      margin: 5px 3px;
+      margin: 3px 3px;
       position: relative;
 
       strong {
         font-weight: 700;
       }
     }
-
-    // .timecount {
-    //   color: $lineColor;
-    //   margin: 0px 4px;
-    // }
   }
   .comment_wrap {
     overflow: auto;
-    max-height: 60px;
+    max-height: 40px;
   }
   .addcomment {
     font-size: 15px;
@@ -105,7 +101,7 @@
     .commentinputbox {
       width: 100%;
       border-style: none;
-      height: 45px;
+      height: 35px;
       border-top: 1px solid $lineColor;
       padding: 10px;
     }

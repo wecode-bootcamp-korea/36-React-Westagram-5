@@ -3,9 +3,11 @@
 @import '../styles/variables.scss';
 @import '../styles/common.scss';
 
+body {
+  background-color: #fafafa;
+}
 .mainwrap {
   height: 100vh;
-  background-color: #fafafa;
 
   .main {
     justify-content: center;
