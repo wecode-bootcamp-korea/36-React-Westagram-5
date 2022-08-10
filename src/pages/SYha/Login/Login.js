@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './Login.scss';
 const Login = () => {
   // state
-  const [userId, setUserId] = useState('');
-  const [userPw, setUserPw] = useState('');
+  const [userInfo, setUserInfo] = useState({
+    email: '',
+    password: '',
+  });
 
   // set 함수
-  const saveUserId = event => {
-    setUserId(event.target.value); //userID에 사용자의 입력값을 넣어줌
+  const saveUserInfo = event => {
+    const ID = event.target.id;
+    const VALUE = event.target.value;
+    setUserInfo({ ...userInfo, [ID]: VALUE }); //userID에 사용자의 입력값을 넣어줌
   };
-  const saveUserPw = event => {
-    setUserPw(event.target.value);
-  };
-  const Isvalid = (userId, userPw) => {
+
+  const Isvalid = userInfo => {
     return (
-      userId.indexOf('@') !== -1 && userId.length >= 6 && userPw.length >= 5
+      userInfo.email.indexOf('@') !== -1 &&
+      userInfo.email.length >= 6 &&
+      userInfo.password.length >= 5
     );
   };
 
@@ -24,6 +28,41 @@ const Login = () => {
   const navigate = useNavigate();
   const goToMain = () => {
     navigate('/mainha');
+  };
+
+  // 회원가입
+  const signup = e => {
+    e.preventDefault();
+    fetch('http://10.58.4.94:3000/auth/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: userInfo.email,
+        password: userInfo.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => console.log(data));
+  };
+
+  // 로그인
+
+  const checkLogin = e => {
+    e.preventDefault();
+    fetch('http://10.58.4.94:3000/auth/signin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: userInfo.email,
+        password: userInfo.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => localStorage.setItem('token', data));
   };
 
   return (
@@ -34,34 +73,39 @@ const Login = () => {
         </header>
         <form className="flex form">
           <input
-            classId=""
+            id="email"
             className="pwAndId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            value={userId}
-            onChange={saveUserId}
-            onKeyUp={Isvalid}
+            value={userInfo.email}
+            onChange={saveUserInfo}
+            // onKeyUp={Isvalid}
           />
           <input
+            id="password"
             className="pwAndId"
             type="password"
             placeholder="비밀번호"
-            value={userPw}
-            onChange={saveUserPw}
+            value={userInfo.password}
+            onChange={saveUserInfo}
           />
 
           <button
-            className={
-              Isvalid(userId, userPw) ? 'loginbtn' : 'loginbtn_disabled'
-            }
-            disabled={Isvalid(userId, userPw) ? false : true}
-            onClick={goToMain}
+            className={Isvalid(userInfo) ? 'loginbtn' : 'loginbtn_disabled'}
+            disabled={Isvalid(userInfo) ? false : true}
+            onClick={checkLogin}
+            type="submit"
           >
             로그인
           </button>
         </form>
 
         <footer>
+          <a className="atag" href="/" onClick={signup}>
+            회원가입
+          </a>
+          <br />
+          <br />
           <a className="atag" href="/">
             비밀번호를 잊으셨나요?
           </a>
