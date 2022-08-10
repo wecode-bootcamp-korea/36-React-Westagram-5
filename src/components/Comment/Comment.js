@@ -5,13 +5,13 @@ const Comment = () => {
   return (
     <section className="comment">
       <div className="comment_detail">
-        <img src="images/JSham/heart.png" className="img_size" alt="profile" />
+        <img src="images/JSham/heart.png" className="img_size" alt="heart" />
         <img
           src="images/JSham/comment.png"
           className="img_size"
-          alt="profile"
+          alt="comment"
         />
-        <img src="images/JSham/dm.png" className="img_size" alt="profile" />
+        <img src="images/JSham/dm.png" className="img_size" alt="dm" />
       </div>
       <div>
         <span className="emphasis">ok.soosoo</span> 님
