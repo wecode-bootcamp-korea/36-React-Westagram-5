@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputComment from './InputComment';
 import './Feed.scss';
 
@@ -6,7 +6,9 @@ const Feed = () => {
   const [feed, setFeed] = useState([]);
 
   useEffect(() => {
-    fetch('/data/FeedData.json')
+    fetch('/data/FeedData.json', {
+      method: 'Get',
+    })
       .then(respose => respose.json())
       .then(result => setFeed(result));
   }, []);
@@ -41,6 +43,7 @@ const Feed = () => {
                   className="porfileArticle"
                   src={feed.feed_profile_img}
                 />
+                &nbsp;
                 {feed.post}
               </div>
               <br />
