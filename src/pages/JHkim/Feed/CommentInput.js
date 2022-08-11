@@ -1,4 +1,3 @@
-//TODO : Feed.js && CommentLi.js 컴포넌트 리팩토링중
 import { useState } from 'react';
 import CommentLi from './CommentLi';
 

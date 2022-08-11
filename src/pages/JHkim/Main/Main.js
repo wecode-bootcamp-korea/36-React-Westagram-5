@@ -1,9 +1,8 @@
 import React from 'react';
 import Story from './Components/Story';
 import Nav from '../../../components/Nav/Nav';
-import Feed from './Components/Feed';
-import MainRight from './Components/MainRight';
-
+import Feed from '../Feed/Feed';
+import MainRight from '../MainRight/MainRight';
 import './Main.scss';
 
 function Main() {

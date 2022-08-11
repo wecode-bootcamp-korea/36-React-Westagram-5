@@ -1,7 +1,7 @@
-import Story from './Story';
-import Footer from './Footer';
+import Story from '../Main/Components/Story';
+import Footer from '../Main/Components/Footer';
 import './MainRight.scss';
-import './Footer.scss';
+import '../Main/Components/Footer.scss';
 
 function MainRight({ userName }) {
   return (
