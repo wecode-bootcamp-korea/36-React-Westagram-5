@@ -17,12 +17,12 @@ function Login() {
     });
   }
 
-  const isValidate =
+  const inputValidate =
     account.email.includes('@') && account.password.length >= 5;
 
   const loginHandle = e => {
     e.preventDefault();
-    fetch('http://10.58.6.178:3333/auth/signin', {
+    fetch('http://10.58.5.11:3000/auth/signin', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
@@ -31,20 +31,23 @@ function Login() {
       }),
     })
       .then(response => response.json())
-      .then(data =>
-        localStorage.setItem(Object.keys(data)[0], Object.values(data)[0])
-      );
-    if (localStorage.getItem('accessToken')) {
-      navigate('/maink');
-    } else if (localStorage.getItem('message') === 'invalid password') {
-      navigate('/logink');
-      alert('비밀번호가 틀립니다.');
-    } else if (
-      localStorage.getItem('message') === 'specified user does not exist'
-    ) {
-      navigate('/logink');
-      alert('email을 다시 입력해주세요.');
-    }
+      .then(data => {
+        localStorage.setItem(Object.keys(data)[0], Object.values(data)[0]);
+        const tokenValidate = localStorage.getItem('accessToken');
+        const passwordValidate =
+          localStorage.getItem('message') === 'invalid password';
+        const emailValidate =
+          localStorage.getItem('message') === 'specified user does not exist';
+        if (tokenValidate) {
+          navigate('/maink');
+        } else if (emailValidate) {
+          navigate('/logink');
+          alert('email을 다시 입력해주세요.');
+        } else if (passwordValidate) {
+          navigate('/logink');
+          alert('비밀번호가 틀립니다.');
+        }
+      });
   };
 
   return (
@@ -66,7 +69,7 @@ function Login() {
             value={account.password}
             onChange={savedUserAccount}
           />
-          {!isValidate ? (
+          {!inputValidate ? (
             <Link to="/logink">
               <LoginBtn to="/logink" className="submitButton" disabled={true} />
             </Link>
