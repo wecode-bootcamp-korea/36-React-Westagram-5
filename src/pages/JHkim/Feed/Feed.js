@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import CommentLi from './CommentLi';
+import CommentLi from './CommentForm';
 import './Feed.scss';
 
 function Feed() {

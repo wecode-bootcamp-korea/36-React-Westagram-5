@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import LikeBtn from './LikeBtn';
-import './CommentLi.scss';
+import './CommentForm.scss';
 
 const CommentLi = () => {
   const [comments, setComment] = useState([]);
