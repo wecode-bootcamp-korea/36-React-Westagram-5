@@ -13,47 +13,47 @@ function Feed() {
 
   return feed.map(feed => {
     return (
-      <div key={feed.ID} className="feed">
+      <div key={feed.ID} className="Feed">
         <article>
-          <div className="article-head">
+          <div className="ArticleHead">
             <h2>
               <img src={feed.HeaderImg} alt="This is profile" />
               <p>{feed.userId}</p>
             </h2>
             <i className="fas fa-thin fa-ellipsis" />
           </div>
-          <div className="article-content">
+          <div className="ArticleContent">
             <img
-              className="article-main-img"
+              className="ArticleMainImg"
               src={feed.TitleImg}
               alt="This is article"
             />
-            <div className="article-btn-img">
-              <div className="left-side">
+            <div className="ArticleBtnImg">
+              <div className="LeftSide">
                 <img
-                  className="btn-img"
+                  className="BtnImg"
                   src="images/JHKim/heart.png"
                   alt="This is heart icon"
                 />
                 <img
-                  className="btn-img"
+                  className="BtnImg"
                   src="images/JHKim/chat.png"
                   alt="This is comment icon"
                 />
                 <img
-                  className="btn-img"
+                  className="BtnImg"
                   src="images/JHKim/export.png"
                   alt="This is share icon"
                 />
               </div>
               <img
-                className="btn-img"
+                className="BtnImg"
                 src="images/JHKim/tag.png"
                 alt="This is book mark icon"
               />
             </div>
           </div>
-          <div className="article-comment">
+          <div className="ArticleComment">
             <CommentLi />
           </div>
         </article>

@@ -2,7 +2,7 @@ import './Story.scss';
 
 function Story({ onEvent }) {
   return (
-    <div className="story">
+    <div className="Story">
       <ul>{onEvent}</ul>
     </div>
   );

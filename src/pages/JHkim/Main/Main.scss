@@ -1,18 +1,17 @@
-.wrap {
+.Container {
   width: 100%;
   height: 100%;
   background-color: rgb(251 251 251);
 
-  /* Main style*/
-  .main-container {
+  .Main {
     padding-top: 100px;
     display: flex;
     justify-content: center;
 
-    .otherAndStory-wrap {
+    .StoryAndFeed {
       justify-content: space-evenly;
 
-      .main-other-story {
+      .MainStory {
         padding: 15px 0px 15px 0px;
         width: 500px;
         border: 1px solid #cdcdcd;

@@ -1,13 +1,13 @@
-.new-li {
+.NewLi {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  span strong {
+  strong {
     font-weight: 900;
   }
 
-  #delete-button {
+  .DeleteButton {
     border: none;
     font-size: 16px;
     font-weight: 900;
@@ -15,13 +15,13 @@
     background-color: white;
   }
 
-  #delete-button:hover {
+  .DeleteButton:hover {
     font-size: 17px;
     color: red;
     cursor: pointer;
   }
 }
-.article-comment {
+.ArticleComment {
   padding: 10px;
 
   input {
@@ -31,7 +31,7 @@
   }
 }
 
-.comment-input-wrap form {
+.CommentInputWrap form {
   display: flex;
   align-items: center;
   padding-top: 5px;

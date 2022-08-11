@@ -1,4 +1,4 @@
-import { FOOTER_INFO_LIST } from '../../data/Footer';
+import { FOOTER_INFO_LIST } from '../../data/FOOTER_INFO_LIST';
 
 function Footer() {
   return (

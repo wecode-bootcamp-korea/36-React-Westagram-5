@@ -51,10 +51,10 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <main className="loginDiv">
+    <div className="Login">
+      <main className="LoginDiv">
         <h1>westargram</h1>
-        <form className="inputForm">
+        <form className="InputForm">
           <input
             name="email"
             type="email"
@@ -69,19 +69,13 @@ function Login() {
             value={account.password}
             onChange={savedUserAccount}
           />
-          {!inputValidate ? (
-            <Link to="/logink">
-              <LoginBtn to="/logink" className="submitButton" disabled={true} />
-            </Link>
-          ) : (
-            <LoginBtn
-              className="submitButton validated"
-              disabled={false}
-              onClick={loginHandle}
-            />
-          )}
+          <LoginBtn
+            className={`LoginBtn ${inputValidate ? 'Validated' : ''}`}
+            disabled={!inputValidate}
+            onClick={inputValidate && loginHandle}
+          />
         </form>
-        <Link to="/logink" className="pwLink">
+        <Link to="/logink" className="PwLink">
           비밀번호를 잊으셨나요?
         </Link>
       </main>

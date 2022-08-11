@@ -1,11 +1,11 @@
-.feed {
+.Feed {
   width: 500px;
   margin-top: 30px;
   border-radius: 7px;
   border: 1px solid #cdcdcd;
   background-color: white;
 
-  .article-head {
+  .ArticleHead {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,19 +24,19 @@
     }
   }
 
-  .article-main-img {
+  .ArticleMainImg {
     width: 498px;
     height: 498px;
   }
-  .article-btn-img {
+  .ArticleBtnImg {
     display: flex;
     padding: 8px;
     justify-content: space-between;
 
-    .left-side {
+    .LeftSide {
       display: flex;
     }
-    .btn-img {
+    .BtnImg {
       width: 20px;
       height: 20px;
       margin-right: 10px;

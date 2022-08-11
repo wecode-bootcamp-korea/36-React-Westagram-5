@@ -1,4 +1,4 @@
-.container {
+.Login {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
   background: linear-gradient(180deg, #fff, rgb(255, 211, 218));
 
-  .loginDiv {
+  .LoginDiv {
     width: 550px;
     margin: auto;
     text-align: center;
@@ -22,7 +22,7 @@
   }
 }
 
-.inputForm {
+.InputForm {
   width: 400px;
   margin: auto;
   display: flex;
@@ -41,7 +41,7 @@
   }
 }
 
-.loginDiv .pwLink {
+.LoginDiv .PwLink {
   display: block;
   margin: 100px 0px 50px 0px;
   font-family: 'Noto Sans KR', sans-serif;

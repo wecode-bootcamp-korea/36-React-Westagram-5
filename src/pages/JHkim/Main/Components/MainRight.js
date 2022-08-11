@@ -7,9 +7,9 @@ import './Footer.scss';
 
 function MainRight({ userName }) {
   return (
-    <div className="main-right-wrap">
-      <div className="main-right">
-        <div className="right-profile">
+    <div className="MainRightWrap">
+      <div className="MainRight">
+        <div className="RightProfile">
           <h2>
             <img src="images/JHKim/운명 트로트 2.jpg" alt="" />
           </h2>
@@ -20,8 +20,8 @@ function MainRight({ userName }) {
             <p>{userName}'S account</p>
           </div>
         </div>
-        <MainRightStory className="Right-story" onEvent={imgRender(url)} />
-        <MainRightStory className="recommend-story" onEvent={imgRender(url)} />
+        <MainRightStory className="RightStory" onEvent={imgRender(url)} />
+        <MainRightStory className="RecommendStory" onEvent={imgRender(url)} />
       </div>
       <Footer />
     </div>

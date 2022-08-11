@@ -30,16 +30,16 @@ const CommentLi = () => {
   };
   return (
     <>
-      <ul id="comment-list">
+      <ul className="CommentLi">
         {comments.map((comment, idx) => {
           return (
-            <li id={idx} key={idx} className="new-li">
+            <li id={idx} key={idx} className="NewLi">
               <span>
                 <strong>{users}</strong>
                 {comment}
               </span>
               <div>
-                <button id="delete-button" onClick={deleteLi}>
+                <button className="DeleteButton" onClick={deleteLi}>
                   X
                 </button>
                 <LikeBtn />
@@ -48,10 +48,9 @@ const CommentLi = () => {
           );
         })}
       </ul>
-      <div className="comment-input-wrap">
+      <div className="CommentInputWrap">
         <form action="#" method="get">
           <input
-            id="comment-input"
             type="text"
             value={input}
             onChange={saveComment}
@@ -59,7 +58,6 @@ const CommentLi = () => {
           />
           <button
             type="submit"
-            id="upload-button"
             onClick={input !== '' ? handleUpload : disableUpload}
           >
             게시

@@ -8,11 +8,11 @@ import './Main.scss';
 
 function Main() {
   return (
-    <div className="wrap">
+    <div className="Container">
       <Nav />
-      <main className="main-container">
-        <div className="otherAndStory-wrap">
-          <div className="main-other-story">
+      <main className="Main">
+        <div className="StoryAndFeed">
+          <div className="MainStory">
             <Story onEvent={imgRender(url)} />
           </div>
           <Feed />
