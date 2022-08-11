@@ -1,0 +1,11 @@
+footer ul {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+
+  li a {
+    color: rgb(177, 177, 177);
+    margin-right: 3px;
+    text-decoration: none;
+  }
+}

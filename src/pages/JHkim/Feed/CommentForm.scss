@@ -1,0 +1,49 @@
+.NewLi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  strong {
+    font-weight: 900;
+  }
+
+  .DeleteButton {
+    border: none;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+    background-color: white;
+  }
+
+  .DeleteButton:hover {
+    font-size: 17px;
+    color: red;
+    cursor: pointer;
+  }
+}
+.ArticleComment {
+  padding: 10px;
+
+  input {
+    width: 470px;
+    outline: none;
+    border: none;
+  }
+}
+
+.CommentInputWrap form {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  margin-top: 5px;
+  border-top: 1px solid #efefef;
+
+  button {
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    color: #0095f6;
+    background-color: rgba(178, 164, 255, 0.2);
+  }
+}

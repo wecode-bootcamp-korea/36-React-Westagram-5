@@ -1,0 +1,45 @@
+.Feed {
+  width: 500px;
+  margin-top: 30px;
+  border-radius: 7px;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+
+  .ArticleHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    h2 {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0px 10px 0px 0px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .ArticleMainImg {
+    width: 498px;
+    height: 498px;
+  }
+  .ArticleBtnImg {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+
+    .LeftSide {
+      display: flex;
+    }
+    .BtnImg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+}
