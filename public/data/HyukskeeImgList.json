@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "src": "images/JHKim/1.png",
+    "name": "name1",
+    "alt": "This is img1"
+  },
+  {
+    "id": 2,
+    "src": "images/JHKim/2.jpg",
+    "name": "name2",
+    "alt": "This is img2"
+  },
+  {
+    "id": 3,
+    "src": "images/JHKim/3.png",
+    "name": "name3",
+    "alt": "This is img3"
+  },
+  {
+    "id": 4,
+    "src": "images/JHKim/4.jfif",
+    "name": "name4",
+    "alt": "This is img4"
+  },
+  {
+    "id": 5,
+    "src": "images/JHKim/5.png",
+    "name": "name5",
+    "alt": "This is img5"
+  },
+  {
+    "id": 6,
+    "src": "images/JHKim/6.jpg",
+    "name": "name6",
+    "alt": "This is img6"
+  }
+]

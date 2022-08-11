@@ -1,8 +1,6 @@
-import MainRightStory from './MainRightStory';
-import imgRender from './imgRender';
+import Story from './Story';
 import Footer from './Footer';
 import './MainRight.scss';
-import './MainRightStory.scss';
 import './Footer.scss';
 
 function MainRight({ userName }) {
@@ -11,7 +9,7 @@ function MainRight({ userName }) {
       <div className="MainRight">
         <div className="RightProfile">
           <h2>
-            <img src="images/JHKim/운명 트로트 2.jpg" alt="" />
+            <img src="images/JHKim/운명 트로트 2.jpg" alt="This is profile" />
           </h2>
           <div>
             <h3>
@@ -20,8 +18,12 @@ function MainRight({ userName }) {
             <p>{userName}'S account</p>
           </div>
         </div>
-        <MainRightStory className="RightStory" onEvent={imgRender(url)} />
-        <MainRightStory className="RecommendStory" onEvent={imgRender(url)} />
+        <div className="RightStory">
+          <Story className={' '} />
+        </div>
+        <div className="RecommendStory">
+          <Story className={' '} />
+        </div>
       </div>
       <Footer />
     </div>
@@ -29,12 +31,3 @@ function MainRight({ userName }) {
 }
 
 export default MainRight;
-
-const url = [
-  { src: 'images/JHKim/1.png', name: 'name1' },
-  { src: 'images/JHKim/2.jpg', name: 'name2' },
-  { src: 'images/JHKim/3.png', name: 'name3' },
-  { src: 'images/JHKim/4.jfif', name: 'name4' },
-  { src: 'images/JHKim/5.png', name: 'name5' },
-  { src: 'images/JHKim/6.jpg', name: 'name6' },
-];
