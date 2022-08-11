@@ -8,7 +8,7 @@ const Newcomment = ({ comment }) => {
         <strong>IamFriend </strong>
         <p>{comment}</p>
       </div>
-      <span onClick={() => {}}>X</span>
+      <span>X</span>
     </div>
   );
 };

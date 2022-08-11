@@ -3,34 +3,23 @@ import { useNavigate } from 'react-router-dom';
 
 import './Login.scss';
 const Login = () => {
-  // state
   const [userInfo, setUserInfo] = useState({
     email: '',
     password: '',
   });
 
-  // set 함수
   const saveUserInfo = event => {
-    const ID = event.target.id;
-    const VALUE = event.target.value;
-    setUserInfo({ ...userInfo, [ID]: VALUE }); //userID에 사용자의 입력값을 넣어줌
+    const { id, value } = event.target;
+    setUserInfo({ ...userInfo, [id]: value });
   };
 
-  const Isvalid = userInfo => {
-    return (
-      userInfo.email.indexOf('@') !== -1 &&
-      userInfo.email.length >= 6 &&
-      userInfo.password.length >= 5
-    );
-  };
+  const IsValid =
+    userInfo.email.indexOf('@') !== -1 &&
+    userInfo.email.length >= 6 &&
+    userInfo.password.length >= 5;
 
-  // Navigate
   const navigate = useNavigate();
-  // const goToMain = () => {
-  //   navigate('/mainha');
-  // };
 
-  // 회원가입
   const signup = e => {
     e.preventDefault();
     fetch('http://10.58.4.94:3000/auth/signup', {
@@ -46,9 +35,6 @@ const Login = () => {
       .then(response => response.json())
       .then(data => data);
   };
-
-  // 로그인
-
   const checkLogin = e => {
     e.preventDefault();
     fetch('http://10.58.4.94:3000/auth/signin', {
@@ -68,6 +54,9 @@ const Login = () => {
     }
   };
 
+  // const token = localStorage.getItem('token) 으로 먼저 변수에 지정하고 사용
+  // 보통에러메세지는 로컬스토리지에 저장 하지 않는다.
+
   return (
     <main className="body flex login_main">
       <article className="mainBox">
@@ -76,13 +65,12 @@ const Login = () => {
         </header>
         <form className="flex form">
           <input
-            id="email"
+            id="email" //id 보다 name을 사용
             className="pwAndId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value={userInfo.email}
             onChange={saveUserInfo}
-            // onKeyUp={Isvalid}
           />
           <input
             id="password"
@@ -92,10 +80,9 @@ const Login = () => {
             value={userInfo.password}
             onChange={saveUserInfo}
           />
-
           <button
-            className={Isvalid(userInfo) ? 'loginbtn' : 'loginbtn_disabled'}
-            disabled={Isvalid(userInfo) ? false : true}
+            className={`loginbtn ${!IsValid ? 'disabled' : ''}`}
+            disabled={!IsValid}
             onClick={checkLogin}
             type="submit"
           >
