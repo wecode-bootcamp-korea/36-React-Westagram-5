@@ -18,21 +18,23 @@ const Login = () => {
   return (
     <main className="login">
       <div className="loginTitle">westagram</div>
-      <form className="loginForm">
-        <div className="loginSection" onSubmit={e => e.preventDefault()}>
+      <form
+        className="loginForm"
+        onSubmit={e => e.preventDefault()}
+        onChange={getUserInfo}
+      >
+        <div className="loginSection">
           <input
             name="id"
             className="loginId"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             type="text"
-            onChange={getUserInfo}
           />
           <input
             name="pw"
             className="loginPwd"
             placeholder="비밀번호"
             type="password"
-            onChange={getUserInfo}
           />
           <div className="loginbutton">
             <button
@@ -53,7 +55,7 @@ const Login = () => {
 };
 
 export default Login;
-
+//ToDo
 // function dataSend(e) {
 //   e.preventDefault();
 //   fetch('http://10.58.6.117:3000/auth/signup', {

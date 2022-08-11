@@ -8,7 +8,7 @@ const InputComment = () => {
 
   const [feedComments, setFeedComments] = useState([]);
 
-  const [isValid, setIsValid] = useState(false);
+  const isValid = comment.length;
 
   const post = e => {
     const copyFeedComments = [...feedComments];
@@ -29,7 +29,7 @@ const InputComment = () => {
   };
 
   return (
-    <div className="commentbox">
+    <div className="inputComment">
       {feedComments.map((comments, i) => (
         <CommentList userName={userName} value={comments} key={i} />
       ))}
@@ -41,14 +41,11 @@ const InputComment = () => {
           onChange={e => {
             setComment(e.target.value);
           }}
-          onKeyUp={e => {
-            e.target.value.length > 0 ? setIsValid(true) : setIsValid(false);
-          }}
           value={comment}
         />
         <button
           type="button"
-          className={comment.length > 0 ? 'replyButton' : 'replyButtondisabled'}
+          className={isValid > 0 ? 'replyButton' : 'replyButtondisabled'}
           onClick={post}
           disabled={!isValid}
         >
