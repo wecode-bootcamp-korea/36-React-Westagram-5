@@ -1,7 +1,18 @@
 import React from 'react';
-
+import Nav from '../../../components/Nav/Nav';
+import Feed from './components/Feed/Feed';
+import RightFeed from './components/RightFeed/RightFeed';
+import './Main.scss';
 const Main = () => {
-  return <h1>안녕하세요</h1>;
+  return (
+    <>
+      <Nav />
+      <div className="main">
+        <Feed />
+        <RightFeed />
+      </div>
+    </>
+  );
 };
 
 export default Main;

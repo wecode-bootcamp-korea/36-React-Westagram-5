@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "porfile_img": "./images/JHSo/733080D4-CFEC-4792-A206-EBF493F57B89.jpg",
+    "name": "s0jae",
+    "side_img": "./images/JHSo/8035118.png",
+    "center_img": "./images/JHSo/kyle-cleveland-8y2v6ijBiBo-unsplash.jpg",
+    "icon_img": "./images/JHSo/2107845.png",
+    "icon_two_img": "./images/JHSo/151789.png",
+    "icon_third_img": "./images/JHSo/2089736.png",
+    "icon_right_img": "./images/JHSo/5662990.png",
+    "feed_profile_img": "./images/JHSo/IMG_6377.JPG",
+    "post": "wecode님 외 1000명이 좋하합니다",
+    "comment": " 위워크에서 진행한 꽃꽂이 클래스..",
+    "view": "더 보기"
+  },
+  {
+    "id": 2,
+    "porfile_img": "./images/JHSo/733080D4-CFEC-4792-A206-EBF493F57B89.jpg",
+    "name": "s0jae",
+    "side_img": "./images/JHSo/8035118.png",
+    "center_img": "./images/JHSo/5.jpg",
+    "icon_img": "./images/JHSo/2107845.png",
+    "icon_two_img": "./images/JHSo/151789.png",
+    "icon_third_img": "./images/JHSo/2089736.png",
+    "icon_right_img": "./images/JHSo/5662990.png",
+    "feed_profile_img": "./images/JHSo/3.JPG",
+    "post": "sososo님 외 1명이 좋하합니다",
+    "comment": " 로마에서..",
+    "view": "더 보기"
+  },
+  {
+    "id": 3,
+    "porfile_img": "./images/JHSo/733080D4-CFEC-4792-A206-EBF493F57B89.jpg",
+    "name": "s0jae",
+    "side_img": "./images/JHSo/8035118.png",
+    "center_img": "./images/JHSo/6.jpg",
+    "icon_img": "./images/JHSo/2107845.png",
+    "icon_two_img": "./images/JHSo/151789.png",
+    "icon_third_img": "./images/JHSo/2089736.png",
+    "icon_right_img": "./images/JHSo/5662990.png",
+    "feed_profile_img": "./images/JHSo/1.JPG",
+    "post": "213dasd님 외 13123명이 좋하합니다",
+    "comment": " 아보카도 먹고싶다..",
+    "view": "더 보기"
+  }
+]
