@@ -3,7 +3,7 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <header className="name">
+    <header className="header">
       <img
         src="images/JSham/main_profile.jpg"
         className="name_size"

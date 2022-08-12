@@ -11,7 +11,6 @@ import MainRight from '../../../components/MainRight/MainRight';
 const Main = () => {
   return (
     <div>
-      <title>Westagram</title>
       <main className="container">
         <Story />
         <Header />
