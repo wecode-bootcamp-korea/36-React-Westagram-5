@@ -1,0 +1,15 @@
+.feeds {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  border: 1px solid #dedede;
+  border-top: none;
+  border-bottom: none;
+
+  .feed_size {
+    width: 100%;
+    height: 100%;
+  }
+}

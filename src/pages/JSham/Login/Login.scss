@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.main {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0;
+  padding-top: 80px;
+  width: 70%;
+  margin: auto;
+
+  .wrap {
+    border: 1px solid #dbdbdb;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    text-align: center;
+    margin: auto;
+    width: 350px;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: 'Lobster';
+    font-size: 45px;
+    padding-bottom: 30px;
+    margin: 0;
+  }
+
+  form {
+    height: 40%;
+    flex-direction: column;
+  }
+  input,
+  button {
+    margin: 10px 10px;
+    width: 70%;
+    height: 15%;
+  }
+
+  button {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .hr-sect {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: #8e8e8e;
+    font-size: 12px;
+    margin: 20px 0px;
+  }
+
+  .hr-sect::before,
+  .hr-sect::after {
+    content: '';
+    flex-grow: 1;
+    background: #dbdbdb;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0 30px;
+  }
+
+  .forget {
+    color: #00376b;
+    font-size: 12px;
+    margin-top: 12px;
+  }
+
+  .center {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  .loginbtn {
+    background-color: #0095f6;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+  }
+  .disabled {
+    background-color: #c4e1fb;
+  }
+}

@@ -1,0 +1,13 @@
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.7fr 1.3fr;
+  grid-template-rows: 90px 30px 70px 500px 250px;
+  width: 75%;
+  margin: auto;
+  padding-top: 56px;
+}
