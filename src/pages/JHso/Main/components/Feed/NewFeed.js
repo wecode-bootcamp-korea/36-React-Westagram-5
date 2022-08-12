@@ -1,36 +1,45 @@
 import React from 'react';
 import InputComment from './InputComment';
 import './NewFeed.scss';
-const NewFeed = ({ feed }) => {
+const NewFeed = ({
+  porfile_img,
+  name,
+  side_img,
+  center_img,
+  icon_img,
+  icon_two_img,
+  icon_third_img,
+  icon_right_img,
+  feed_profile_img,
+  post,
+  comment,
+  view,
+}) => {
   return (
     <div className="newFeed">
       <div className="imgtop">
-        <img alt="Feed" className="porfile" src={feed.porfile_img} />
-        {feed.name}
-        <img alt="Feed" className="porfilemenu" src={feed.side_img} />
+        <img alt="Feed" className="porfile" src={porfile_img} />
+        {name}
+        <img alt="Feed" className="porfilemenu" src={side_img} />
       </div>
       <div className="article">
-        <img alt="Feed" className="articleImg" src={feed.center_img} />
+        <img alt="Feed" className="articleImg" src={center_img} />
       </div>
       <div className="articleicon">
-        <img alt="Feed" className="aicon" src={feed.icon_img} />
-        <img alt="Feed" className="aicon" src={feed.icon_two_img} />
-        <img alt="Feed" className="aicon" src={feed.icon_third_img} />
-        <img alt="Feed" className="aicon save" src={feed.icon_right_img} />
+        <img alt="Feed" className="aicon" src={icon_img} />
+        <img alt="Feed" className="aicon" src={icon_two_img} />
+        <img alt="Feed" className="aicon" src={icon_third_img} />
+        <img alt="Feed" className="aicon save" src={icon_right_img} />
       </div>
       <div className="articleText">
-        <img
-          alt="Feed"
-          className="porfileArticle"
-          src={feed.feed_profile_img}
-        />
+        <img alt="Feed" className="porfileArticle" src={feed_profile_img} />
         &nbsp;
-        {feed.post}
+        {post}
       </div>
       <br />
       <div className="articleTextButton">
-        {feed.comment}
-        <span className="gray">{feed.view}</span>
+        {comment}
+        <span className="gray">{view}</span>
         <br />
       </div>
       <InputComment />

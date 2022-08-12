@@ -17,7 +17,7 @@ const Feed = () => {
     <div className="feed">
       <div className="feeds">
         {feed.map(feed => {
-          return <NewFeed feed={feed} key={feed.id} />;
+          return <NewFeed {...feed} key={feed.id} />;
         })}
       </div>
     </div>
