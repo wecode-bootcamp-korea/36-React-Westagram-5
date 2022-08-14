@@ -1,14 +1,14 @@
 import React from 'react';
 import './Newcomment.scss';
 
-const Newcomment = ({ comment }) => {
+const Newcomment = ({ item: { commentvalue }, deleteComment }) => {
   return (
     <div className="comment_list">
       <div className="idAndComment">
         <strong>IamFriend </strong>
-        <p>{comment}</p>
+        <p>{commentvalue}</p>
       </div>
-      <span>X</span>
+      <span onClick={deleteComment}>X</span>
     </div>
   );
 };

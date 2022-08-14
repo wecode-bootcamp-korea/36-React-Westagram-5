@@ -12,8 +12,14 @@ const Feed = ({ userId, feedImg, desc }) => {
 
   const addToList = e => {
     e.preventDefault();
-    setCommentList([...commentList, comment]);
+    const id = new Date().getTime();
+    const commentvalue = comment;
+    setCommentList([...commentList, { id, commentvalue }]);
     setComment('');
+  };
+
+  const deleteComment = idVal => {
+    setCommentList(commentList.filter(comment => comment.id !== idVal));
   };
 
   return (
@@ -70,16 +76,20 @@ const Feed = ({ userId, feedImg, desc }) => {
         </p>
       </div>
       <div className="comment_wrap">
-        {commentList.map((item, index) => (
-          <Newcomment comment={item} key={index} />
+        {commentList.map((comment, index) => (
+          <Newcomment
+            item={comment}
+            key={index}
+            deleteComment={() => deleteComment(comment.id)}
+          />
         ))}
       </div>
       <form className="addcomment" onSubmit={addToList}>
         <input
           className="commentinputbox"
           type="text"
-          placeholder="댓글달기...."
           value={comment}
+          placeholder="댓글달기...."
           onChange={getInputValue}
         />
         <button disabled={comment.length > 0 ? false : true} className="button">

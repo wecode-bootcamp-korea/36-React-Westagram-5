@@ -69,15 +69,14 @@ const Login = () => {
             className="pwAndId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            value={userInfo.email}
             onChange={saveUserInfo}
           />
+
           <input
             id="password"
             className="pwAndId"
             type="password"
             placeholder="비밀번호"
-            value={userInfo.password}
             onChange={saveUserInfo}
           />
           <button
