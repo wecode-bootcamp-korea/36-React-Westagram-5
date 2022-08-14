@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,MAAM,EAAE,QAAQ;EAChB,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAY/B;;AAhBD,AAKE,aALW,CAKX,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;CAKd;;AAXH,AAOI,aAPS,CAKX,aAAa,CAEX,MAAM,CAAC;EACL,WAAW,EAAE,GAAG;EAChB,YAAY,EAAE,GAAG;CAClB;;AAVL,AAYE,aAZW,CAYX,IAAI,CAAC;EAEH,MAAM,EAAE,OAAO;CAChB",
+    "sources": [
+        "Newcomment.scss"
+    ],
+    "names": [],
+    "file": "Newcomment.css"
+}

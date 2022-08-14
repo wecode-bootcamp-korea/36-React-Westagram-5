@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import '../styles/mixin.scss';
+@import '../styles/variables.scss';
+@import '../styles/common.scss';
+
+body {
+  background-color: #fafafa;
+}
+.mainwrap {
+  height: 100vh;
+
+  .main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 95%;
+
+    &_inner {
+      width: 80%;
+      height: 93%;
+      padding: 10px;
+      max-width: 750px;
+      max-height: 896px;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 90px;
+    }
+  }
+}

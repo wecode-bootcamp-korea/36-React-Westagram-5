@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+.body {
+  height: 100vh;
+  background-color: #fafafa;
+  margin: 0px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
