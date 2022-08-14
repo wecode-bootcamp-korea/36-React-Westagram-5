@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+.body {
+  height: 100vh;
+  background-color: #fafafa;
+  margin: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  background-color: white;
+  height: 8%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1.5px solid #e6e6e6;
+  position: absolute;
+  width: 100vw;
+}
+
+.nav .inner {
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 780px;
+  min-width: 720px;
+}
+
+.nav .inner .header_left {
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+}
+
+.nav .inner .header_left .img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.nav .inner .header_search {
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-position: 40px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  padding: 0px 5px;
+  text-indent: 14px;
+  width: 120px;
+  border-radius: 3px;
+}
+
+.nav .inner .header_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 15%;
+}
+
+.nav .inner .header_right .rightop_icon {
+  width: 25px;
+  height: 25px;
+}
+/*# sourceMappingURL=Nav.css.map */

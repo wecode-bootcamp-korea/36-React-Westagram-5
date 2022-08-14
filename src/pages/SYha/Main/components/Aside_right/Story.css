@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+.body {
+  height: 100vh;
+  background-color: #fafafa;
+  margin: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.story {
+  height: 30%;
+  border: 1.5px solid #e6e6e6;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+}
+
+.story .top_title {
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.story .top_title > p:first-child {
+  color: #9d9d9d;
+}
+
+.story .instagramlist_wrap {
+  overflow: auto;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5px;
+}
+
+.story .instagramlist_wrap .instagralist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  padding: 3px 10px 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 35px;
+}
+
+.story .instagramlist_wrap .instagralist .insta_logo {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  padding: 1.5px;
+  border: 1.5px solid #d301c5;
+}
+/*# sourceMappingURL=Story.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,GAAG;CACZ;;AAED,AAAA,UAAU,GAAG,IAAI,CAAC;EAChB,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,OAAO;CACf",
+    "sources": [
+        "Instainfo.scss"
+    ],
+    "names": [],
+    "file": "Instainfo.css"
+}
